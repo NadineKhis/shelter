@@ -5,18 +5,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-body {
-  margin: 0;
-  background-color: black; }
-
 .wrapper {
   display: flex;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 75rem;
   justify-content: space-between; }
 
-.header {
-  width: 100vw; }
+body > div.bg > header {
+  width: 100%;
+  padding: 60px; }
 
 .logo {
   display: flex;
@@ -25,14 +22,17 @@ body {
 .logo__title {
   color: #F1CDB3;
   font-family: Georgia;
-  font-size: 32px;
-  letter-spacing: 6%;
+  font-size: 2rem;
+  letter-spacing: 0.12rem;
   line-height: 110%; }
 
 .logo__subtitle {
-  letter-spacing: 10%;
-  font-size: 13px;
-  line-height: 110%; }
+  margin-top: 10px;
+  color: #FFFFFF;
+  letter-spacing: 0.1em;
+  font-size: 0.8575rem;
+  line-height: 110%;
+  text-align: center; }
 
 .menu {
   display: flex;
@@ -51,9 +51,9 @@ body {
   align-items: center; }
 
 .list__link {
-  color: #fff;
+  color: #FFFFFF;
   font-family: Arial;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 160%; }
 
 .list__link_active {
@@ -62,19 +62,46 @@ body {
 .list__link_disabled {
   color: #CDCDCD; }
 
+.bg {
+  background: url(../../assets/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20; }
+
 .hero {
-  display: flex;
-  background-color: black; }
+  display: flex; }
 
 .hero-content {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  padding-bottom: 82px; }
 
 .hero-title {
-  color: #fff; }
+  max-width: 19.375rem;
+  color: #FFFFFF;
+  font-family: Georgia;
+  font-size: 2.75rem;
+  line-height: 130%;
+  font-weight: 400; }
 
 .hero-subtitle {
-  color: #CDCDCD; }
+  margin-top: 2.625rem;
+  max-width: 460px;
+  color: #CDCDCD;
+  font-family: Arial;
+  line-height: 160%;
+  font-weight: 400;
+  font-size: 15px; }
+
+.hero-button {
+  width: 207px;
+  margin-top: 42px;
+  border-radius: 100px;
+  font-family: Georgia;
+  font-size: 17px;
+  background-color: #F1CDB3;
+  border: none;
+  padding: 15px 45px; }
+
+.puppy-bg {
+  padding: 0 0 0 40px; }
 
 /*# sourceMappingURL=main.css.map */

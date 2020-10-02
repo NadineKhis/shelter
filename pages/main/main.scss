@@ -1,31 +1,34 @@
+$color-primary: #F1CDB3;
+$color-primary-light: #FDDCC4;
+$color-light-xl:  #FFFFFF;
+$color-light-s: #FAFAFA;
+$color-dark-s: #CDCDCD;
+$color-dark-m: #B2B2B2;
+$color-dark-l: #545454;
+$color-dark-xl: #4C4C4C;
+$color-dark-2xl: #444444;
+$color-dark-3xl: #292929;
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
-
-}
-
-body {
-  margin: 0;
-  background-color: black;
-
 }
 
 .wrapper {
   display: flex;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 75rem;
   justify-content: space-between;
-
 }
 
-.header {
-  width: 100vw;
-
+body > div.bg > header {
+  width: 100%;
+  padding: 60px;
 }
+
 
 .logo {
   display: flex;
@@ -33,19 +36,20 @@ body {
 }
 
 .logo__title {
-  color: #F1CDB3;
+  color: $color-primary;
   font-family: Georgia;
-  font-size: 32px;
-  letter-spacing: 6%;
+  font-size: 2rem;
+  letter-spacing: 0.12rem;
   line-height: 110%;
 }
 
-
 .logo__subtitle {
-  //color: #fff;
-  letter-spacing: 10%;
-  font-size: 13px;
+  margin-top: 10px;
+  color: $color-light-xl;
+  letter-spacing: 0.1em;
+  font-size: 0.8575rem;
   line-height: 110%;
+  text-align: center;
 }
 
 .menu {
@@ -68,35 +72,67 @@ body {
 }
 
 .list__link {
-  color: #fff;
+  color: $color-light-xl;
   font-family: Arial;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 160%;
 }
 
 .list__link_active {
-  border-bottom: solid 3px #F1CDB3;
+  border-bottom: solid 3px $color-primary;
 }
 
 .list__link_disabled {
-  color: #CDCDCD;
+  color: $color-dark-s;
+}
+
+.bg {
+  background: url(../../assets/noise_transparent@2x.png),
+  radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%),
+  #211F20;
 }
 
 .hero {
   display: flex;
-  background-color: black;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 82px;
 }
 
 .hero-title {
-  color: #fff;
+  max-width: 19.375rem;
+  color: $color-light-xl;
+  font-family: Georgia;
+  font-size: 2.75rem;
+  line-height: 130%;
+  font-weight: 400;
 }
 
 .hero-subtitle {
-  color: #CDCDCD;
+  margin-top: 2.625rem;
+  max-width: 460px;
+  color: $color-dark-s;
+  font-family: Arial;
+  line-height: 160%;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.hero-button {
+  width: 207px;
+  margin-top: 42px;
+  border-radius: 100px;
+  font-family: Georgia;
+  font-size: 17px;
+  background-color: $color-primary;
+  border: none;
+  padding: 15px 45px;
+}
+
+.puppy-bg {
+  padding: 0 0 0 40px;
 }
