@@ -9,7 +9,53 @@ $color-dark-xl: #4C4C4C;
 $color-dark-2xl: #444444;
 $color-dark-3xl: #292929;
 
+@mixin h2 {
+  font: {
+    family: Georgia;
+    size: 4.4rem;
+    weight: 400;
+  };
+}
+
+@mixin h3 {
+  font: {
+    family: Georgia;
+    style: normal;
+    weight: normal;
+    size: 35px;
+  };
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+@mixin h4 {
+  font: {
+    family: Georgia;
+    style: normal;
+    weight: normal;
+    size: 20px;
+  };
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+@mixin h5 {
+  font: {
+    family: Georgia;
+    style: normal;
+    weight: normal;
+    size: 15px;
+  };
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+:root {
+  font-size: 10px;
+}
+
 * {
+
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -20,7 +66,7 @@ $color-dark-3xl: #292929;
 .wrapper {
   display: flex;
   margin: 0 auto;
-  max-width: 75rem;
+  max-width: 120rem;
   justify-content: space-between;
 }
 
@@ -28,7 +74,6 @@ body > div.bg > header {
   width: 100%;
   padding: 60px;
 }
-
 
 .logo {
   display: flex;
@@ -38,16 +83,16 @@ body > div.bg > header {
 .logo__title {
   color: $color-primary;
   font-family: Georgia;
-  font-size: 2rem;
-  letter-spacing: 0.12rem;
+  font-size: 3.2rem;
+  letter-spacing: 0.2rem;
   line-height: 110%;
 }
 
 .logo__subtitle {
   margin-top: 10px;
   color: $color-light-xl;
-  letter-spacing: 0.1em;
-  font-size: 0.8575rem;
+  letter-spacing: 0.02rem;
+  font-size: 1.7rem;
   line-height: 110%;
   text-align: center;
 }
@@ -74,7 +119,7 @@ body > div.bg > header {
 .list__link {
   color: $color-light-xl;
   font-family: Arial;
-  font-size: 0.9375rem;
+  font-size: 1.5rem;
   line-height: 160%;
 }
 
@@ -100,21 +145,20 @@ body > div.bg > header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 82px;
+  padding-bottom: 4rem;
 }
 
 .hero-title {
-  max-width: 19.375rem;
+  padding: 0 0 4rem 0;
+  max-width: 31rem;
   color: $color-light-xl;
-  font-family: Georgia;
-  font-size: 2.75rem;
   line-height: 130%;
-  font-weight: 400;
+  @include h2;
 }
 
 .hero-subtitle {
-  margin-top: 2.625rem;
-  max-width: 460px;
+  padding-bottom: 1rem;
+  max-width: 46rem;
   color: $color-dark-s;
   font-family: Arial;
   line-height: 160%;
@@ -124,15 +168,17 @@ body > div.bg > header {
 
 .hero-button {
   width: 207px;
-  margin-top: 42px;
+  margin-top: 3.5rem;
+  margin-bottom: 5rem;
   border-radius: 100px;
   font-family: Georgia;
   font-size: 17px;
   background-color: $color-primary;
   border: none;
   padding: 15px 45px;
+  letter-spacing: 0.06rem;
 }
 
 .puppy-bg {
-  padding: 0 0 0 40px;
+  padding: 0 0 0 4rem;
 }

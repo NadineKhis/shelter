@@ -1,3 +1,6 @@
+:root {
+  font-size: 10px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +11,7 @@
 .wrapper {
   display: flex;
   margin: 0 auto;
-  max-width: 75rem;
+  max-width: 120rem;
   justify-content: space-between; }
 
 body > div.bg > header {
@@ -22,15 +25,15 @@ body > div.bg > header {
 .logo__title {
   color: #F1CDB3;
   font-family: Georgia;
-  font-size: 2rem;
-  letter-spacing: 0.12rem;
+  font-size: 3.2rem;
+  letter-spacing: 0.2rem;
   line-height: 110%; }
 
 .logo__subtitle {
   margin-top: 10px;
   color: #FFFFFF;
-  letter-spacing: 0.1em;
-  font-size: 0.8575rem;
+  letter-spacing: 0.02rem;
+  font-size: 1.7rem;
   line-height: 110%;
   text-align: center; }
 
@@ -53,7 +56,7 @@ body > div.bg > header {
 .list__link {
   color: #FFFFFF;
   font-family: Arial;
-  font-size: 0.9375rem;
+  font-size: 1.5rem;
   line-height: 160%; }
 
 .list__link_active {
@@ -72,19 +75,20 @@ body > div.bg > header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 82px; }
+  padding-bottom: 4rem; }
 
 .hero-title {
-  max-width: 19.375rem;
+  padding: 0 0 4rem 0;
+  max-width: 31rem;
   color: #FFFFFF;
-  font-family: Georgia;
-  font-size: 2.75rem;
   line-height: 130%;
+  font-family: Georgia;
+  font-size: 4.4rem;
   font-weight: 400; }
 
 .hero-subtitle {
-  margin-top: 2.625rem;
-  max-width: 460px;
+  padding-bottom: 1rem;
+  max-width: 46rem;
   color: #CDCDCD;
   font-family: Arial;
   line-height: 160%;
@@ -93,15 +97,17 @@ body > div.bg > header {
 
 .hero-button {
   width: 207px;
-  margin-top: 42px;
+  margin-top: 3.5rem;
+  margin-bottom: 5rem;
   border-radius: 100px;
   font-family: Georgia;
   font-size: 17px;
   background-color: #F1CDB3;
   border: none;
-  padding: 15px 45px; }
+  padding: 15px 45px;
+  letter-spacing: 0.06rem; }
 
 .puppy-bg {
-  padding: 0 0 0 40px; }
+  padding: 0 0 0 4rem; }
 
 /*# sourceMappingURL=main.css.map */
