@@ -28,7 +28,7 @@ body > div.bg > header {
     font-family: Georgia;
     font-size: 3.2rem;
     line-height: 110%;
-    letter-spacing: 0.2rem; }
+    letter-spacing: 0.192rem; }
   .logo__subtitle {
     margin-top: 10px;
     color: #FFFFFF;
@@ -56,7 +56,7 @@ body > div.bg > header {
     align-items: center; }
     .list .list__item .list__link {
       color: #FFFFFF;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       font-size: 1.5rem;
       line-height: 160%; }
       .list .list__item .list__link_active {
@@ -65,7 +65,7 @@ body > div.bg > header {
         color: #CDCDCD; }
 
 .bg {
-  background: url(../../assets/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20; }
+  background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20; }
 
 .hero {
   display: flex; }
@@ -73,34 +73,40 @@ body > div.bg > header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 4rem; }
-    .hero__content .hero__title {
-      padding: 0 0 4rem 0;
-      max-width: 31rem;
-      color: #FFFFFF;
-      line-height: 130%;
-      font-family: Georgia, Serif;
-      font-size: 4.4rem;
-      font-weight: 400; }
-    .hero__content .hero__subtitle {
-      padding-bottom: 1rem;
-      max-width: 46rem;
-      color: #CDCDCD;
-      font-family: Arial;
-      line-height: 160%;
-      font-weight: 400;
-      font-size: 1.5rem; }
-    .hero__content .hero-button {
-      width: 207px;
-      margin-top: 3.5rem;
-      margin-bottom: 4rem;
-      border-radius: 100px;
-      font-family: Georgia;
-      font-size: 17px;
-      background-color: #F1CDB3;
-      border: none;
-      padding: 1.5rem 4.5rem;
-      letter-spacing: 0.06rem; }
+    padding-bottom: 4rem;
+    align-items: flex-start; }
+  .hero__title {
+    padding: 0 0 4rem 0;
+    max-width: 31rem;
+    color: #FFFFFF;
+    line-height: 130%;
+    font-family: Georgia, Serif;
+    font-size: 4.4rem;
+    font-weight: 400; }
+  .hero__subtitle {
+    padding-bottom: 1rem;
+    max-width: 46rem;
+    color: #CDCDCD;
+    font-family: Arial, sans-serif;
+    line-height: 160%;
+    font-weight: 400;
+    font-size: 1.5rem; }
+  .hero__button {
+    background-color: #F1CDB3;
+    border-radius: 100px;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    padding: 1.5rem 4.5rem;
+    letter-spacing: 0.0108rem;
+    cursor: pointer;
+    outline: transparent;
+    border: none;
+    transition-duration: 0.3s;
+    margin-top: 3.5rem;
+    margin-bottom: 4rem;
+    letter-spacing: 0.1rem; }
+    .hero__button:hover {
+      background-color: #FDDCC4; }
   .hero .puppy-bg {
     padding: 0 0 0 4rem; }
 
@@ -127,7 +133,7 @@ body > div.bg > header {
     font-weight: normal;
     font-size: 3.5rem;
     line-height: 130%;
-    letter-spacing: 0.06em; }
+    letter-spacing: 0.21rem; }
     .about__title span {
       display: block; }
   .about__description {
@@ -141,6 +147,123 @@ body > div.bg > header {
       line-height: 160%; }
       .about__description p:nth-child(2) {
         margin-top: 2.5rem; }
+
+.pets {
+  padding-top: 8rem;
+  padding-bottom: 10rem; }
+  .pets__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .pets__title {
+    max-width: 40rem;
+    text-align: center;
+    color: #545454;
+    font-family: Georgia, Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.5rem;
+    line-height: 130%;
+    letter-spacing: 0.21rem; }
+    .pets__title span {
+      display: block;
+      letter-spacing: 0.2rem; }
+  .pets__content {
+    display: flex;
+    align-items: center; }
+    .pets__content .slider-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 5.2rem;
+      height: 5.2rem;
+      border: none;
+      box-shadow: inset 0 0 0 0.3rem #F1CDB3;
+      border-radius: 100%;
+      padding: 1.9rem;
+      background: transparent;
+      cursor: pointer;
+      transition-duration: 0.3s;
+      outline: transparent; }
+      .pets__content .slider-button:hover {
+        box-shadow: none;
+        background-color: #FDDCC4; }
+    .pets__content .slider-button_right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 5.2rem;
+      height: 5.2rem;
+      border: none;
+      box-shadow: inset 0 0 0 0.3rem #F1CDB3;
+      border-radius: 100%;
+      padding: 1.9rem;
+      background: transparent;
+      cursor: pointer;
+      transition-duration: 0.3s;
+      transform: scaleX(-1);
+      outline: transparent; }
+      .pets__content .slider-button_right:hover {
+        box-shadow: none;
+        background-color: #FDDCC4; }
+    .pets__content__cards {
+      display: flex;
+      padding: 6rem 0.8rem; }
+      .pets__content__cards .card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.9rem;
+        margin: 0 4.5rem; }
+        .pets__content__cards .card:hover {
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04); }
+        .pets__content__cards .card__image {
+          width: 100%; }
+        .pets__content__cards .card__content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 3rem; }
+        .pets__content__cards .card__title {
+          margin: 3rem 0;
+          font-family: Georgia, Serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 2rem;
+          line-height: 115%;
+          letter-spacing: 0.12rem; }
+        .pets__content__cards .card__button {
+          background: transparent;
+          box-shadow: inset 0 0 0 2px #F1CDB3;
+          border-radius: 100px;
+          font-family: Georgia, serif;
+          font-size: 17px;
+          padding: 1.5rem 4.5rem;
+          letter-spacing: 0.0108rem;
+          cursor: pointer;
+          outline: transparent;
+          border: none;
+          transition-duration: 0.3s;
+          letter-spacing: 0.09rem; }
+          .pets__content__cards .card__button:hover {
+            box-shadow: none;
+            background-color: #FDDCC4; }
+  .pets__button {
+    background-color: #F1CDB3;
+    border-radius: 100px;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    padding: 1.5rem 4.5rem;
+    letter-spacing: 0.0108rem;
+    cursor: pointer;
+    outline: transparent;
+    border: none;
+    transition-duration: 0.3s;
+    width: 26rem;
+    letter-spacing: 0.09rem;
+    padding: 1.8rem 4.5rem; }
+    .pets__button:hover {
+      background-color: #FDDCC4; }
 
 @media screen and (max-width: 1280px) {
   .wrapper {
