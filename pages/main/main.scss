@@ -1,5 +1,6 @@
 $color-primary: #F1CDB3;
 $color-primary-light: #FDDCC4;
+$color-light-l: #F6F6F6;
 $color-light-xl: #FFFFFF;
 $color-light-s: #FAFAFA;
 $color-dark-s: #CDCDCD;
@@ -40,6 +41,7 @@ $card-hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   };
   line-height: 130%;
   letter-spacing: 0.21rem;
+  color: $color-dark-l;
 }
 
 @mixin h4 {
@@ -51,6 +53,7 @@ $card-hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   };
   line-height: 115%;
   letter-spacing: 0.12rem;
+  color: $color-dark-l;
 }
 
 @mixin h5 {
@@ -72,6 +75,7 @@ $card-hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     size: 1.5rem;
   };
   line-height: 160%;
+  color: $color-dark-l;
 }
 
 @mixin paragraph-s {
@@ -134,7 +138,7 @@ $card-hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   outline: transparent;
   border: none;
   transition-duration: 0.3s;
-
+  color: $color-dark-3xl;
 }
 
 @mixin button-primary() {
@@ -325,7 +329,7 @@ body > div.bg > header {
 .pets {
   padding-top: 8rem;
   padding-bottom: 10rem;
-  background: #f6f6f6;
+  background: $color-light-l;
 
   &__wrapper {
     width: 100%;
@@ -451,10 +455,11 @@ body > div.bg > header {
 
     }
 
-    .help__item  {
+    .help__item {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
       h4 {
         margin-top: 2rem;
         @include h4;
@@ -465,6 +470,72 @@ body > div.bg > header {
       margin-bottom: 1rem;
     }
   }
+}
+
+.donation {
+  background: $color-light-l;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    padding: 8rem 14.2rem 0 14.2rem;
+    margin-bottom: 10rem;
+
+    &__image {
+      padding-top: 1.3rem;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 3rem;
+
+      span {
+        display: block;
+      }
+
+      h3 {
+        @include h3;
+      }
+
+      h5 {
+        @include h5;
+        padding-top: 2.5rem;
+      }
+
+      .donation__credit {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        height: 4.3rem;
+        width: 34.9rem;
+        border-radius: 0.9rem;
+        background-color: $color-primary;
+        margin-top: 1.8rem;
+        padding-top: 1rem;
+
+        h4 {
+          @include h4;
+        }
+      }
+
+      p {
+        @include paragraph-s;
+        padding-top: 2rem;
+        color: $color-dark-m;
+      }
+    }
+  }
+
 }
 
 @media screen and (max-width: 1280px) {
