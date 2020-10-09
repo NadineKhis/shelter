@@ -60,7 +60,8 @@ body > div.bg > header {
       font-size: 1.5rem;
       line-height: 160%; }
       .list .list__item .list__link_active {
-        border-bottom: solid 3px #F1CDB3; }
+        border-bottom: solid 3px #F1CDB3;
+        padding-top: 0.5rem; }
       .list .list__item .list__link_disabled {
         color: #CDCDCD; }
 
@@ -336,7 +337,7 @@ body > div.bg > header {
     display: flex;
     flex-direction: row;
     padding: 8rem 14.2rem 0 14.2rem;
-    margin-bottom: 10rem; }
+    margin-bottom: 10.2rem; }
     .donation__content__image {
       padding-top: 1.3rem; }
     .donation__content__info {
@@ -389,6 +390,75 @@ body > div.bg > header {
         line-height: 150%;
         padding-top: 2rem;
         color: #B2B2B2; }
+
+.footer {
+  background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20; }
+  .footer__wrapper {
+    width: 100%;
+    height: 35rem; }
+  .footer__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    .footer__content-1 {
+      max-width: 30rem;
+      height: 23.4rem; }
+      .footer__content-1__email {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 25.1rem;
+        padding-top: 4.5rem; }
+      .footer__content-1__phone {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 23.9rem;
+        padding-top: 4.3rem; }
+    .footer__content-2 {
+      display: flex;
+      flex-direction: column;
+      width: 30.2rem;
+      height: 23.4rem;
+      margin-right: 2rem; }
+      .footer__content-2 span {
+        display: block; }
+      .footer__content-2 h3 {
+        max-width: 32.5rem; }
+      .footer__content-2__address {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 3rem; }
+        .footer__content-2__address h4 {
+          padding-left: 2rem; }
+      .footer__content-2__city {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 4rem;
+        width: 27rem; }
+    .footer__content-image {
+      margin-top: 4rem; }
+    .footer__content h3 {
+      font-family: Georgia, Serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 3.5rem;
+      line-height: 130%;
+      letter-spacing: 0.21rem;
+      color: #545454;
+      color: #FFFFFF; }
+    .footer__content h4 {
+      font-family: Georgia, Serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2rem;
+      line-height: 115%;
+      letter-spacing: 0.12rem;
+      color: #545454;
+      color: #F1CDB3; }
 
 @media screen and (max-width: 1280px) {
   .wrapper {

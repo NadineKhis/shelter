@@ -225,6 +225,7 @@ body > div.bg > header {
 
       &_active {
         border-bottom: solid 3px $color-primary;
+        padding-top: 0.5rem;
       }
 
       &_disabled {
@@ -236,6 +237,8 @@ body > div.bg > header {
 
 .bg {
   background: $start-screen-gradient-background;
+
+
 }
 
 .hero {
@@ -247,6 +250,7 @@ body > div.bg > header {
     justify-content: center;
     padding-bottom: 4rem;
     align-items: flex-start;
+
   }
 
   &__title {
@@ -272,7 +276,6 @@ body > div.bg > header {
     margin-top: 3.5rem;
     margin-bottom: 4rem;
     letter-spacing: 0.1rem;
-
   }
 
   .puppy-bg {
@@ -486,7 +489,7 @@ body > div.bg > header {
     display: flex;
     flex-direction: row;
     padding: 8rem 14.2rem 0 14.2rem;
-    margin-bottom: 10rem;
+    margin-bottom: 10.2rem;
 
     &__image {
       padding-top: 1.3rem;
@@ -535,7 +538,95 @@ body > div.bg > header {
       }
     }
   }
+}
 
+.footer {
+  background: $footer-gradient-background;
+
+  &__wrapper {
+    width: 100%;
+    height: 35rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &-1 {
+      max-width: 30rem;
+      height: 23.4rem;
+
+      &__email {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 25.1rem;
+        padding-top: 4.5rem;
+      }
+
+      &__phone {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 23.9rem;
+        padding-top: 4.3rem;
+      }
+
+    }
+
+    &-2 {
+      display: flex;
+      flex-direction: column;
+      width: 30.2rem;
+      height: 23.4rem;
+      margin-right: 2rem;
+
+      span {
+        display: block;
+      }
+
+      h3 {
+        max-width: 32.5rem;
+      }
+
+      &__address {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        //width: 26rem;
+        margin-top: 3rem;
+
+        h4 {
+          padding-left: 2rem;
+        }
+      }
+
+      &__city {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 4rem;
+        width: 27rem;
+      }
+    }
+
+    &-image {
+      margin-top: 4rem;
+    }
+
+    h3 {
+      @include h3;
+      color: $color-light-xl;
+
+    }
+
+    h4 {
+      @include h4;
+      color: $color-primary;
+    }
+  }
 }
 
 @media screen and (max-width: 1280px) {
