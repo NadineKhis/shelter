@@ -482,26 +482,23 @@ header {
     color: #292929; }
 
 .pets__content__cards {
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding: 6rem 0; }
+  .pets__content__cards .card {
+    margin: 0 2rem 3.5rem; }
+    .pets__content__cards .card__left-side {
+      margin-left: 0; }
+    .pets__content__cards .card__right-side {
+      margin-right: 0; }
+    .pets__content__cards .card__content {
+      background: #fafafa; }
+  .pets__content__cards .break {
+    width: 100%; }
 
-.animals {
+.pets {
   background: #F6F6F6; }
-  .animals__wrapper {
+  .pets__wrapper {
     display: grid;
     place-items: center; }
-  .animals__title {
-    font-family: Georgia, Serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 3.5rem;
-    line-height: 130%;
-    letter-spacing: 0.21rem;
-    color: #545454;
-    text-align: center;
-    max-width: 40rem;
-    margin-top: 8rem;
-    margin-left: 11rem; }
-    .animals__title span {
-      display: block; }
 
 /*# sourceMappingURL=pets.css.map */

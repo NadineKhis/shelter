@@ -39,24 +39,38 @@ header {
 
 .pets__content__cards {
   flex-wrap: wrap;
+  padding: 6rem 0;
+
+  .card {
+    margin: 0 2rem 3.5rem;
+
+    &__left-side {
+      margin-left: 0;
+    }
+
+    &__right-side {
+      margin-right: 0;
+    }
+
+    &__content {
+      background: #fafafa;
+    }
+  }
+
+  .break {
+    width: 100%;
+  }
+
 }
 
-.animals {
+.pets {
   background: $color-light-l;
+
   &__wrapper {
     display: grid;
     place-items: center;
   }
 
-  &__title {
-    @include h3;
-    text-align: center;
-    max-width: 40rem;
-    margin-top: 8rem;
-    margin-left: 11rem;
-
-    span {
-      display: block;
-    }
-  }
 }
+
+
