@@ -121,6 +121,7 @@ $card-hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   background: transparent;
   cursor: pointer;
   transition-duration: 0.3s;
+  outline: transparent;
 
   &:hover {
     box-shadow: none;
@@ -190,6 +191,8 @@ body > div.bg > header {
   &__title {
     color: $color-primary;
     @include logo-title;
+    white-space: nowrap;
+    margin-right: 8.1rem;
   }
 
   &__subtitle {
@@ -217,23 +220,37 @@ body > div.bg > header {
     display: flex;
     align-items: center;
 
+    &:hover {
+      color: green;
+    }
+
     .list__link {
-      color: $color-light-xl;
+      color: $color-light-l;
       font-family: Arial, sans-serif;
       font-size: 1.5rem;
       line-height: 160%;
+      cursor: pointer;
 
       &_active {
         border-bottom: solid 3px $color-primary;
         padding-top: 0.5rem;
+
+        &:hover {
+          border-bottom: transparent;
+        }
       }
 
       &_disabled {
-        color: $color-dark-s;
+        color: $color-dark-l;
+
+        &:hover {
+          color: #fff;
+        }
       }
     }
   }
 }
+
 
 .bg {
   background: $start-screen-gradient-background;

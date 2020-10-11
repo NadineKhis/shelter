@@ -28,7 +28,9 @@ body > div.bg > header {
     font-family: Georgia;
     font-size: 3.2rem;
     line-height: 110%;
-    letter-spacing: 0.192rem; }
+    letter-spacing: 0.192rem;
+    white-space: nowrap;
+    margin-right: 8.1rem; }
   .logo__subtitle {
     margin-top: 10px;
     color: #FFFFFF;
@@ -54,16 +56,23 @@ body > div.bg > header {
   .list .list__item {
     display: flex;
     align-items: center; }
+    .list .list__item:hover {
+      color: green; }
     .list .list__item .list__link {
-      color: #FFFFFF;
+      color: #F6F6F6;
       font-family: Arial, sans-serif;
       font-size: 1.5rem;
-      line-height: 160%; }
+      line-height: 160%;
+      cursor: pointer; }
       .list .list__item .list__link_active {
         border-bottom: solid 3px #F1CDB3;
         padding-top: 0.5rem; }
+        .list .list__item .list__link_active:hover {
+          border-bottom: transparent; }
       .list .list__item .list__link_disabled {
-        color: #CDCDCD; }
+        color: #545454; }
+        .list .list__item .list__link_disabled:hover {
+          color: #fff; }
 
 .bg {
   background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20; }
@@ -191,6 +200,7 @@ body > div.bg > header {
       background: transparent;
       cursor: pointer;
       transition-duration: 0.3s;
+      outline: transparent;
       outline: transparent; }
       .pets__content .slider-button:hover {
         box-shadow: none;
@@ -208,6 +218,7 @@ body > div.bg > header {
       background: transparent;
       cursor: pointer;
       transition-duration: 0.3s;
+      outline: transparent;
       transform: scaleX(-1);
       outline: transparent; }
       .pets__content .slider-button_right:hover {
