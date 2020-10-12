@@ -187,12 +187,13 @@ body > div.bg > header {
 .logo {
   display: flex;
   flex-direction: column;
+  margin-right: 8.1rem;
 
   &__title {
     color: $color-primary;
     @include logo-title;
     white-space: nowrap;
-    margin-right: 8.1rem;
+
   }
 
   &__subtitle {
@@ -251,7 +252,6 @@ body > div.bg > header {
   }
 }
 
-
 .bg {
   background: $start-screen-gradient-background;
 }
@@ -265,7 +265,6 @@ body > div.bg > header {
     justify-content: center;
     padding-bottom: 4rem;
     align-items: flex-start;
-
   }
 
   &__title {
@@ -541,8 +540,9 @@ body > div.bg > header {
         margin-top: 1.8rem;
         padding-top: 1rem;
 
-        h4 {
+        &__number {
           @include h4;
+          cursor: pointer;
         }
       }
 
@@ -580,6 +580,7 @@ body > div.bg > header {
         justify-content: space-between;
         width: 25.1rem;
         padding-top: 4.5rem;
+
       }
 
       &__phone {
@@ -589,6 +590,7 @@ body > div.bg > header {
         width: 23.9rem;
         padding-top: 4.3rem;
       }
+
 
     }
 
@@ -625,6 +627,14 @@ body > div.bg > header {
         justify-content: space-between;
         margin-top: 4rem;
         width: 27rem;
+      }
+    }
+    a {
+      color: $color-primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
 

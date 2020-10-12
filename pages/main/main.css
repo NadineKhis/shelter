@@ -22,15 +22,15 @@ body > div.bg > header {
 
 .logo {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-right: 8.1rem; }
   .logo__title {
     color: #F1CDB3;
     font-family: Georgia;
     font-size: 3.2rem;
     line-height: 110%;
     letter-spacing: 0.192rem;
-    white-space: nowrap;
-    margin-right: 8.1rem; }
+    white-space: nowrap; }
   .logo__subtitle {
     margin-top: 10px;
     color: #FFFFFF;
@@ -385,14 +385,15 @@ body > div.bg > header {
         background-color: #F1CDB3;
         margin-top: 1.8rem;
         padding-top: 1rem; }
-        .donation__content__info .donation__credit h4 {
+        .donation__content__info .donation__credit__number {
           font-family: Georgia, Serif;
           font-style: normal;
           font-weight: normal;
           font-size: 2rem;
           line-height: 115%;
           letter-spacing: 0.12rem;
-          color: #545454; }
+          color: #545454;
+          cursor: pointer; }
       .donation__content__info p {
         font-family: Arial;
         font-style: italic;
@@ -450,6 +451,11 @@ body > div.bg > header {
         justify-content: space-between;
         margin-top: 4rem;
         width: 27rem; }
+    .footer__content a {
+      color: #F1CDB3;
+      text-decoration: none; }
+      .footer__content a:hover {
+        text-decoration: underline; }
     .footer__content-image {
       margin-top: 4rem; }
     .footer__content h3 {
