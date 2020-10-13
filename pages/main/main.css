@@ -519,6 +519,38 @@ body > div.bg > header {
     .pets__content__cards .card:nth-child(2) {
       margin: 0 1rem 0 2rem; }
     .pets__content__cards .card:nth-child(3) {
-      display: none; } }
+      display: none; }
+
+  .help {
+    margin-bottom: 16.6rem; }
+    .help__content {
+      width: 63rem;
+      height: 44.9rem; }
+      .help__content .help__item:nth-child(n+6) {
+        margin: 0; }
+      .help__content .help__item:nth-child(1) {
+        padding-left: 4.5rem; }
+      .help__content .help__item:nth-child(2) {
+        padding-right: 1rem; }
+      .help__content .help__item:nth-child(3) {
+        padding-right: 5.5rem; }
+      .help__content .help__item:nth-child(4) {
+        padding-left: 1rem;
+        padding-top: 5.6rem; }
+      .help__content .help__item:nth-child(5) {
+        padding-top: 5.6rem;
+        padding-right: 3rem; }
+      .help__content .help__item:nth-child(6) {
+        padding-right: 4rem;
+        padding-top: 5.6rem; }
+      .help__content .help__item:nth-child(7) {
+        padding-left: 3.4rem;
+        padding-top: 5.4rem; }
+      .help__content .help__item:nth-child(8) {
+        padding-left: 1.3rem;
+        padding-top: 5.6rem; }
+      .help__content .help__item:nth-child(9) {
+        padding-right: 1rem;
+        padding-top: 5.4rem; } }
 
 /*# sourceMappingURL=main.css.map */
