@@ -220,13 +220,10 @@ body > div.bg > header {
   .list__item {
     display: flex;
     align-items: center;
+    color: $color-light-s;
 
-    &:hover {
-      color: green;
-    }
 
     .list__link {
-      color: $color-light-l;
       font-family: Arial, sans-serif;
       font-size: 1.5rem;
       line-height: 160%;
@@ -242,7 +239,7 @@ body > div.bg > header {
       }
 
       &_disabled {
-        color: $color-dark-l;
+        color: $color-dark-s;
 
         &:hover {
           color: #fff;
@@ -405,6 +402,7 @@ body > div.bg > header {
           flex-direction: column;
           align-items: center;
           padding-bottom: 3rem;
+          background: #fafafa;
         }
 
         &__title {
@@ -450,27 +448,16 @@ body > div.bg > header {
 
   &__content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     //padding-top: 60px;
-    width: 100%;
+    max-width: 102.6rem;
+    max-height: 28.1rem;
     margin-top: 6rem;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0 8rem;
 
-    &__5-items {
-      display: flex;
-      flex-direction: row;
-      text-align: center;
-      justify-content: space-between;
-      padding: 0 8.7rem;
-    }
-
-    &__4-items {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: center;
-      margin: 5.5rem 17rem 0 17rem;
-
-    }
 
     .help__item {
       display: flex;
@@ -481,6 +468,18 @@ body > div.bg > header {
         margin-top: 2rem;
         @include h4;
       }
+    }
+
+    .help__item:nth-child(6) {
+      margin-left: 8.5rem;
+    }
+
+    .help__item:nth-child(9) {
+      margin-right: 8.5rem;
+    }
+
+    .help__item:nth-child(n+6) {
+      margin-top: 5.5rem;
     }
 
     .help__icon {
@@ -629,6 +628,7 @@ body > div.bg > header {
         width: 27rem;
       }
     }
+
     a {
       color: $color-primary;
       text-decoration: none;
@@ -655,16 +655,90 @@ body > div.bg > header {
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1200px) {
   .wrapper {
-    padding: 0 4rem;
+    width: 100%;
+  }
+  body > div.bg > header {
+    padding: 3rem;
+  }
+
+  .hero {
+    flex-wrap: wrap;
+
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      //padding: 3rem 0 0 8rem;
+      margin: 3rem 0 0 8rem;
+    }
+
+    .puppy-bg {
+      padding: 6.1rem 0 0 17rem;
+      width: 73.9rem;
+    }
+
+    &__title {
+      padding: 0 0 3rem 0;
+      margin-right: 8rem;
+    }
+
+    &__subtitle {
+      padding: 0;
+      margin-top: 1.2rem;
+      margin-left: 7.4rem;
+    }
+
+    &__button {
+      margin: 4.5rem 0 0 7.2rem;
+    }
+  }
+
+  .about {
+    &__wrapper {
+      flex-direction: column-reverse;
+      padding: 8rem 18rem 10rem 17rem;
+    }
+
+    &__content {
+      margin: 0;
+    }
+
+    &__description p {
+      width: 43rem;
+    }
+
+    &__image-wrapper {
+      padding-top: 8rem;
+      padding-left: 6rem;
+    }
+  }
+
+  .pets {
+    &__content {
+      &__cards {
+        padding: 6rem 0;
+
+        .card:nth-child(1) {
+          margin: 0 2rem 0 1rem;
+        }
+
+        .card:nth-child(2) {
+          margin: 0 1rem 0 2rem;
+        }
+
+        .card:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .help {
+    &__content {
+
+    }
   }
 }
 
-@media screen and (max-width: 1100px) {
-  .hero__content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
