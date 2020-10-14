@@ -16,6 +16,17 @@
   max-width: 120rem;
   justify-content: space-between; }
 
+html, body {
+  height: 100%; }
+
+html {
+  display: table;
+  margin: auto; }
+
+body {
+  display: table-cell;
+  vertical-align: middle; }
+
 body > div.bg > header {
   width: 100%;
   padding: 6rem; }
@@ -45,6 +56,8 @@ body > div.bg > header {
 .menu {
   display: flex;
   width: 44.3rem; }
+  .menu .burger-button {
+    visibility: collapse; }
 
 .list {
   display: flex;
@@ -475,11 +488,12 @@ body > div.bg > header {
       color: #545454;
       color: #F1CDB3; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1279px) {
   .wrapper {
-    width: 100%; }
+    max-width: 76.8rem; }
 
   body > div.bg > header {
+    display: flex;
     padding: 3rem; }
 
   .hero {
@@ -522,7 +536,7 @@ body > div.bg > header {
       display: none; }
 
   .help {
-    margin-bottom: 16.6rem; }
+    margin-bottom: 17.3rem; }
     .help__content {
       width: 63rem;
       height: 44.9rem; }
@@ -551,7 +565,52 @@ body > div.bg > header {
         padding-top: 5.6rem; }
       .help__content .help__item:nth-child(9) {
         padding-right: 1rem;
-        padding-top: 5.4rem; } }
+        padding-top: 5.4rem; }
+
+  .donation__content {
+    flex-direction: column-reverse;
+    margin-bottom: 9.7rem; }
+    .donation__content__image {
+      padding-top: 6rem; }
+    .donation__content__info {
+      padding-left: 6rem; }
+      .donation__content__info p {
+        padding-right: 8rem; }
+
+  .footer__content {
+    flex-wrap: wrap; }
+    .footer__content-1 {
+      margin-top: 3rem;
+      margin-left: 6.3rem; }
+    .footer__content-2 {
+      margin-top: 3rem;
+      margin-right: 6.3rem; }
+    .footer__content-image {
+      margin-top: 6.5rem;
+      margin-left: 23.3rem; } }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .wrapper {
+    max-width: 32rem; }
+
+  body > div.bg > header {
+    padding: 3rem 0 0 1rem; }
+
+  .logo {
+    margin-right: 4rem; }
+
+  .menu .list {
+    display: none; }
+  .menu .burger-button {
+    visibility: visible; }
+
+  .hero__content {
+    width: 29.6rem;
+    height: 30rem; }
+  .hero__title {
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+    width: 20rem; } }
 header {
   margin: 3rem; }
   header .logo__title {
