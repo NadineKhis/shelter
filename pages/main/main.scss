@@ -175,33 +175,37 @@ $card-hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 .wrapper {
   display: flex;
   margin: 0 auto;
-  max-width: 120rem;
+  max-width: 128rem;
   justify-content: space-between;
 }
 
-html, body {
-  height: 100%;
-}
+//
+//html, body {
+//  height: 100%;
+//}
+//
+//html {
+//  display: table;
+//  margin: auto;
+//}
+//
+//body {
+//  display: table-cell;
+//  vertical-align: middle;
+//}
 
-html {
-  display: table;
-  margin: auto;
-}
-
-body {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-body > div.bg > header {
+header {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  padding: 6rem;
+  padding: 6rem 4rem;
 }
 
 .logo {
   display: flex;
   flex-direction: column;
   margin-right: 8.1rem;
+
 
   &__title {
     color: $color-primary;
@@ -220,7 +224,7 @@ body > div.bg > header {
 
 .menu {
   display: flex;
-  width: 44.3rem;
+  width: 47.3rem;
 
   .burger-button {
     visibility: collapse;
@@ -274,12 +278,20 @@ body > div.bg > header {
 .hero {
   display: flex;
 
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 4rem;
     align-items: flex-start;
+
   }
 
   &__title {
@@ -519,7 +531,7 @@ body > div.bg > header {
   &__content {
     display: flex;
     flex-direction: row;
-    padding: 8rem 14.2rem 0 14.2rem;
+    padding: 8rem 14.2rem 0 18.2rem;
     margin-bottom: 10.2rem;
 
     &__image {
@@ -542,7 +554,7 @@ body > div.bg > header {
 
       h5 {
         @include h5;
-        padding-top: 2.5rem;
+        padding-top: 2.2rem
       }
 
       .donation__credit {
@@ -578,7 +590,7 @@ body > div.bg > header {
   &__wrapper {
     width: 100%;
     //height: 35rem;
-    margin-bottom: 0.5rem;
+    //margin-bottom: 0.5rem;
   }
 
   &__content {
@@ -590,13 +602,15 @@ body > div.bg > header {
     &-1 {
       max-width: 30rem;
       height: 23.4rem;
+      margin-left: 4rem;
+      margin-bottom: 0.4rem;
 
       &__email {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 25.1rem;
-        padding-top: 4.5rem;
+        padding-top: 4.2rem
 
       }
 
@@ -606,9 +620,11 @@ body > div.bg > header {
         justify-content: space-between;
         width: 23.9rem;
         padding-top: 4.3rem;
+
+        h4 {
+          padding-top: 0.5rem;
+        }
       }
-
-
     }
 
     &-2 {
@@ -630,7 +646,6 @@ body > div.bg > header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        //width: 26rem;
         margin-top: 3rem;
 
         h4 {
@@ -642,8 +657,12 @@ body > div.bg > header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 4rem;
+        margin-top: 3.4rem;
         width: 27rem;
+
+        h4 {
+          margin-top: 0.5rem;
+        }
       }
     }
 
@@ -658,6 +677,7 @@ body > div.bg > header {
 
     &-image {
       margin-top: 4rem;
+      margin-right: 4rem;
     }
 
     h3 {
@@ -673,29 +693,40 @@ body > div.bg > header {
   }
 }
 
+
+//-----MEDIA-----
+
+//---TABLET---
 @media screen and (max-width: 1279px) {
 
+  body {
+    width: 76.8rem;
+    margin: 0 auto;
+  }
   .wrapper {
     max-width: 76.8rem;
   }
-  body > div.bg > header {
-    display: flex;
+  header {
     padding: 3rem;
+
+    .logo {
+      margin-right: 4.1rem;
+    }
   }
 
   .hero {
     flex-wrap: wrap;
 
     &__content {
+      padding-right: 7rem;
       flex-direction: column;
       align-items: center;
-      //padding: 3rem 0 0 8rem;
-      margin: 3rem 0 0 8rem;
+      margin: 3rem 0 0 0;
     }
 
     .puppy-bg {
-      padding: 6.1rem 0 0 17rem;
-      width: 73.9rem;
+      padding: 5.9rem 0 0 14.1rem;
+      width: 71.2rem;
     }
 
     &__title {
@@ -710,14 +741,14 @@ body > div.bg > header {
     }
 
     &__button {
-      margin: 4.5rem 0 0 7.2rem;
+      margin: 4.5rem 0 0 6.8rem;
     }
   }
 
   .about {
     &__wrapper {
       flex-direction: column-reverse;
-      padding: 8rem 18rem 10rem 17rem;
+      padding: 8rem 18rem 9.7rem 17rem;
     }
 
     &__content {
@@ -730,11 +761,13 @@ body > div.bg > header {
 
     &__image-wrapper {
       padding-top: 8rem;
-      padding-left: 6rem;
+      padding-left: 6.5rem;
     }
   }
 
   .pets {
+    padding-top: 8.2rem;
+
     &__content {
       &__cards {
         padding: 6rem 0;
@@ -755,7 +788,7 @@ body > div.bg > header {
   }
 
   .help {
-    margin-bottom: 17.3rem;
+    margin-bottom: 16.9rem;
 
     &__content {
       width: 63rem;
@@ -814,6 +847,7 @@ body > div.bg > header {
     &__content {
       flex-direction: column-reverse;
       margin-bottom: 9.7rem;
+      padding: 8rem 14.2rem 0 14.2rem;
 
       &__image {
         padding-top: 6rem;
@@ -822,8 +856,12 @@ body > div.bg > header {
       &__info {
         padding-left: 6rem;
 
+        h5 {
+          padding-top: 2.2rem;
+        }
+
         p {
-          padding-right: 8rem;
+          padding-right: 9rem;
         }
       }
     }
@@ -844,20 +882,26 @@ body > div.bg > header {
       }
 
       &-image {
-        margin-top: 6.5rem;
+        margin-top: 6.2rem;
         margin-left: 23.3rem;
       }
     }
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+//---MOBILE---
+@media screen and (max-width: 767px) {
 
-  .wrapper {
-    max-width: 32rem;
+  body {
+    width: 32rem;
+    //margin: 0 auto;
   }
-  body > div.bg > header {
-    padding: 3rem 0 0 1rem;
+  .wrapper {
+    width: 32rem;
+  }
+  header {
+    padding-top: 3rem;
+    padding-left: 1rem;
   }
 
   .logo {
@@ -876,20 +920,294 @@ body > div.bg > header {
   }
 
   .hero {
+    &__wrapper {
+      align-items: center;
+      margin-top: 3rem;
+    }
+
     &__content {
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
       width: 29.6rem;
       height: 30rem;
     }
 
     &__title {
+      text-align: center;
       font-size: 2.5rem;
       padding: 0;
       margin: 0;
       width: 20rem;
+      letter-spacing: 0.14rem;
+    }
+
+    &__subtitle {
+      margin: 0;
+
+      span {
+        padding-left: 1.7rem;
+      }
+    }
+
+    &__button {
+      margin: 0 0 0.4rem;
+    }
+
+    .puppy-bg {
+      padding: 0;
+      width: 26rem;
+      margin-top: 10.3rem;
+      margin-left: 4rem;
+
     }
   }
 
+  .about {
+    &__wrapper {
+      padding: 0;
+      margin-bottom: 4.1rem;
+    }
 
+    &__content {
+      align-items: center;
+    }
+
+    &__title {
+      letter-spacing: 0.15rem;
+      margin-top: 4.3rem;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    &__description {
+      p {
+        &:nth-child(2) {
+          margin-top: 2rem;
+        }
+
+        width: 27rem;
+        text-align: justify;
+      }
+    }
+
+    &__image-wrapper {
+      align-self: center;
+      padding-left: 0;
+      padding-top: 4rem;
+    }
+
+    &__image {
+      width: 26rem;
+    }
+
+
+  }
+
+  .pets {
+    padding-top: 4.2rem;
+    padding-bottom: 4rem;
+
+    &__title {
+      font-size: 2.5rem;
+
+      span {
+        letter-spacing: 0.15rem;
+      }
+    }
+
+    &__content {
+      flex-flow: wrap;
+      justify-content: center;
+
+      .slider-button {
+        margin-right: 8rem;
+      }
+
+      &__cards {
+        order: -1;
+        padding: 4.4rem 0 2rem;
+
+        .card:nth-child(1) {
+          margin: 0;
+        }
+
+        .card:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+
+    &__button {
+      margin-top: 4.2rem;
+    }
+  }
+
+  .help {
+    padding-top: 4.1rem;
+
+    &__wrapper {
+      margin-bottom: 5rem;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      letter-spacing: 0.15rem;
+    }
+
+    &__content {
+      //flex-direction: column;
+      width: 29rem;
+      height: 55.5rem;
+      display: grid;
+      grid-template-columns: 1fr 13rem;
+      grid-gap: 2rem;
+      margin-top: 4.2rem;
+
+      .help__item {
+        align-items: center;
+
+        &:nth-child(n) {
+          padding: 0;
+        }
+
+        &:nth-child(n+3) {
+          margin-top: 1rem;
+        }
+
+        h4 {
+          font-size: 1.5rem;
+        }
+
+        h4:nth-child(n) {
+          margin-top: 1rem;
+        }
+
+
+        //h4:nth-child(3) {
+        //  margin-top: 2rem;
+        //}
+
+      }
+
+      .help__icon {
+        max-width: 5rem;
+        max-height: 5rem;
+      }
+    }
+
+
+  }
+
+  .donation {
+    &__content {
+      padding: 4rem 0 0;
+      margin-bottom: 3.9rem;
+
+
+      &__info {
+        align-items: center;
+        width: 30rem;
+        height: 28.1rem;
+        padding: 0;
+
+        h3 {
+          font-size: 2.5rem;
+          letter-spacing: 0.15rem;
+          text-align: center;
+        }
+
+        h5 {
+          margin-bottom: 2.1rem;
+          letter-spacing: 0;
+        }
+
+
+        p {
+          padding-right: 0;
+        }
+      }
+
+      .donation__credit {
+        width: 28.1rem;
+        margin: 0;
+        padding-top: 1.2rem;
+        padding-left: 0.3rem;
+
+        a {
+          font-size: 15px;
+        }
+      }
+
+      &__image {
+        padding-top: 4.3rem;
+        padding-left: 2rem;
+
+        img {
+          width: 26rem;
+        }
+      }
+    }
+  }
+
+  .footer {
+
+    &__content {
+      &-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 1rem;
+
+        h3 {
+          font-size: 2.5rem;
+          letter-spacing: 0.15rem;
+          text-align: center;
+        }
+      }
+
+      &-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 1rem;
+
+        margin-top: 1rem;
+        margin-right: 0;
+
+        &__address {
+          margin-top: 4rem;
+        }
+
+        &__city {
+          margin-top: 4.4rem;
+          margin-right: 3rem;
+        }
+
+
+        h3 {
+          font-size: 2.5rem;
+          letter-spacing: 0.15rem;
+          text-align: center;
+          max-width: 27.5rem;
+
+          span {
+            display: inline;
+          }
+        }
+      }
+
+      &-image {
+        margin-top: 2.7rem;
+        margin-right: 0;
+        margin-left: 3rem;
+
+        img {
+          width: 26rem;
+        }
+      }
+    }
+  }
 }
 
 
