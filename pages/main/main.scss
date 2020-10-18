@@ -179,21 +179,6 @@ $card-hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   justify-content: space-between;
 }
 
-//
-//html, body {
-//  height: 100%;
-//}
-//
-//html {
-//  display: table;
-//  margin: auto;
-//}
-//
-//body {
-//  display: table-cell;
-//  vertical-align: middle;
-//}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -717,6 +702,10 @@ header {
   .hero {
     flex-wrap: wrap;
 
+    &__wrapper {
+      flex-direction: column;
+    }
+
     &__content {
       padding-right: 7rem;
       flex-direction: column;
@@ -923,6 +912,7 @@ header {
     &__wrapper {
       align-items: center;
       margin-top: 3rem;
+
     }
 
     &__content {
@@ -1180,7 +1170,7 @@ header {
         }
 
         &__city {
-          margin-top: 4.4rem;
+          margin-top: 4rem;
           margin-right: 3rem;
         }
 

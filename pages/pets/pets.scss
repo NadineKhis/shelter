@@ -5,8 +5,10 @@ body > div.wrapper > header {
   margin: 0;
 
 }
+
 header {
   padding: 3rem 4rem;
+
   .logo {
     &__title {
       color: $color-dark-l;
@@ -112,23 +114,122 @@ header {
     padding: 3rem;
   }
 
-  .pets__content__cards {
-    justify-content: center;
-    padding: 0;
-    margin-top: 3rem;
+  .pets {
+    padding-bottom: 7.6rem;
 
-    //.card {
-    //  margin: 3rem;
-    //  &:nth-child(n) {
-    //    margin: 0;
-    //  }
-    //  &:nth-child(3) {
-    //    display: inline;
-    //  }
-    //  &:nth-child(n+8) {
-    //    display: none;
-    //  }
-    //}
+    &__content {
+      &__cards {
+        justify-content: center;
+        padding: 0;
+        margin-top: 1rem;
+
+        .card {
+
+          &:nth-child(n) {
+            margin: 2rem;
+          }
+
+          &:nth-child(3) {
+            display: flex;
+          }
+
+          &:nth-child(n+8) {
+            display: none;
+          }
+
+          &:nth-child(n+3) {
+            margin-top: 1.3rem;
+          }
+
+          &:nth-child(7) {
+            margin-top: 1.1rem;
+          }
+
+        }
+      }
+    }
+  }
+
+  .pagination {
+    margin-top: 2rem;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding-top: 3rem;
+    padding-left: 1rem;
+  }
+
+  .pets {
+    padding-bottom: 4.4rem;
+
+    &__wrapper {
+      display: flex;
+    }
+
+    &__content {
+      &__cards {
+        justify-content: center;
+        padding: 0;
+        margin-top: 1.3rem;
+
+        .card {
+
+          &__button {
+            margin-top: 0.05rem;
+            padding: 1.64rem 4.5rem;
+          }
+
+          &:nth-child(1) {
+            margin-top: 3rem;
+          }
+
+          &:nth-child(2) {
+            display: flex;
+            margin: 1.3rem;
+
+            .card__title {
+              margin-top: 2.7rem;
+            }
+          }
+
+          &:nth-child(3) {
+            //margin: 2rem;
+          }
+
+          &:nth-child(n+4) {
+            display: none;
+          }
+
+          &:nth-child(n+3) {
+            margin-top: 1.8rem;
+          }
+
+          //&:nth-child(n) {
+          //  margin: 1.7rem;
+          //}
+        }
+      }
+    }
+
+    .pagination {
+
+      &__button {
+        &:nth-child(1) {
+          margin-right: 0;
+        }
+
+        &__active {
+          margin: 0;
+        }
+
+        &:nth-child(5) {
+          margin-left: 0;
+        }
+      }
+    }
   }
 }
 

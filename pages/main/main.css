@@ -505,6 +505,8 @@ header {
 
   .hero {
     flex-wrap: wrap; }
+    .hero__wrapper {
+      flex-direction: column; }
     .hero__content {
       padding-right: 7rem;
       flex-direction: column;
@@ -769,7 +771,7 @@ header {
     .footer__content-2__address {
       margin-top: 4rem; }
     .footer__content-2__city {
-      margin-top: 4.4rem;
+      margin-top: 4rem;
       margin-right: 3rem; }
     .footer__content-2 h3 {
       font-size: 2.5rem;

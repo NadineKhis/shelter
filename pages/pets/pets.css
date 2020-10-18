@@ -505,6 +505,8 @@ header {
 
   .hero {
     flex-wrap: wrap; }
+    .hero__wrapper {
+      flex-direction: column; }
     .hero__content {
       padding-right: 7rem;
       flex-direction: column;
@@ -769,7 +771,7 @@ header {
     .footer__content-2__address {
       margin-top: 4rem; }
     .footer__content-2__city {
-      margin-top: 4.4rem;
+      margin-top: 4rem;
       margin-right: 3rem; }
     .footer__content-2 h3 {
       font-size: 2.5rem;
@@ -864,9 +866,57 @@ header {
   header {
     padding: 3rem; }
 
-  .pets__content__cards {
-    justify-content: center;
-    padding: 0;
-    margin-top: 3rem; } }
+  .pets {
+    padding-bottom: 7.6rem; }
+    .pets__content__cards {
+      justify-content: center;
+      padding: 0;
+      margin-top: 1rem; }
+      .pets__content__cards .card:nth-child(n) {
+        margin: 2rem; }
+      .pets__content__cards .card:nth-child(3) {
+        display: flex; }
+      .pets__content__cards .card:nth-child(n+8) {
+        display: none; }
+      .pets__content__cards .card:nth-child(n+3) {
+        margin-top: 1.3rem; }
+      .pets__content__cards .card:nth-child(7) {
+        margin-top: 1.1rem; }
+
+  .pagination {
+    margin-top: 2rem; } }
+@media screen and (max-width: 768px) {
+  header {
+    padding-top: 3rem;
+    padding-left: 1rem; }
+
+  .pets {
+    padding-bottom: 4.4rem; }
+    .pets__wrapper {
+      display: flex; }
+    .pets__content__cards {
+      justify-content: center;
+      padding: 0;
+      margin-top: 1.3rem; }
+      .pets__content__cards .card__button {
+        margin-top: 0.05rem;
+        padding: 1.64rem 4.5rem; }
+      .pets__content__cards .card:nth-child(1) {
+        margin-top: 3rem; }
+      .pets__content__cards .card:nth-child(2) {
+        display: flex;
+        margin: 1.3rem; }
+        .pets__content__cards .card:nth-child(2) .card__title {
+          margin-top: 2.7rem; }
+      .pets__content__cards .card:nth-child(n+4) {
+        display: none; }
+      .pets__content__cards .card:nth-child(n+3) {
+        margin-top: 1.8rem; }
+    .pets .pagination__button:nth-child(1) {
+      margin-right: 0; }
+    .pets .pagination__button__active {
+      margin: 0; }
+    .pets .pagination__button:nth-child(5) {
+      margin-left: 0; } }
 
 /*# sourceMappingURL=pets.css.map */
