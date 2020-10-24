@@ -23,14 +23,14 @@ header {
     color: $color-dark-l;
 
   }
-
 }
 
-.list {
+#menu-list {
   .list__item {
 
     .list__link {
       color: $color-dark-l;
+      text-decoration: none;
 
       &:hover {
         color: $color-dark-3xl
@@ -41,7 +41,7 @@ header {
       }
 
       &_disabled {
-
+        color: $color-dark-l;
       }
     }
   }

@@ -8,12 +8,55 @@
   <title>Cozy House Shelter</title>
   <link href="main.css" type="text/css" rel="stylesheet">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!--  <script src="script.js"></script>-->
 </head>
 <body>
-<div class="bg">
+<div class="burger-wrapper">
+  <div id="burger-menu-bg">
+    <div class="burger-logo">
+      <div class="burger-logo__title">
+        Cozy House
+      </div>
+      <div class="burger-logo__subtitle">
+        Shelter for pets in Boston
+      </div>
+    </div>
+    <nav id="burger-menu" class="burger-menu">
+      <!--        <div id="menu-bg" class="menu-bg">-->
+      <img id="openBurger" class="burger-button" src="../../assets/images/main/start_screen/Burger.svg" alt="">
+
+      <ul id="burger-menu-list" class="burger-list">
+        <!--            <img class="burger-button-flipped">-->
+        <li class="burger-list__item">
+          <a class="list__link list__link_active" href="../main/main.html">
+            About the shelter
+          </a>
+        </li>
+        <li class="burger-list__item">
+          <a class="list__link list__link_disabled" href="../pets/pets.html">
+            Our pets
+          </a>
+        </li>
+        <li class="burger-list__item">
+          <a class="list__link list__link_disabled" href="javascript:void(0)">
+            Help the shelter
+          </a>
+        </li>
+        <li class="burger-list__item">
+          <a class="list__link list__link_disabled" href="javascript:void(0)">
+            Contacts
+          </a>
+        </li>
+      </ul>
+      <!--        </div>-->
+    </nav>
+  </div>
+</div>
+<div id="burger-fade"></div>
+<div id="bg-content" class="bg">
   <div class="wrapper">
-    <header>
-      <div class="logo">
+    <header id="main-header" class="header">
+      <div id="logo" class="logo">
         <div class="logo__title">
           Cozy House
         </div>
@@ -21,26 +64,25 @@
           Shelter for pets in Boston
         </div>
       </div>
-      <nav class="menu">
-        <img class="burger-button" src="../../assets/images/main/start_screen/Burger.svg" alt="">
-        <ul class="list">
+      <nav id="menu" class="menu">
+        <ul id="menu-list" class="list">
           <li class="list__item">
-            <a class="list__link list__link_active">
+            <a class="list__link list__link_active" href="../main/main.html">
               About the shelter
             </a>
           </li>
           <li class="list__item">
-            <a class="list__link list__link_disabled">
+            <a class="list__link list__link_disabled" href="../pets/pets.html">
               Our pets
             </a>
           </li>
           <li class="list__item">
-            <a class="list__link list__link_disabled">
+            <a class="list__link list__link_disabled" href="javascript:void(0)">
               Help the shelter
             </a>
           </li>
           <li class="list__item">
-            <a class="list__link list__link_disabled">
+            <a class="list__link list__link_disabled" href="javascript:void(0)">
               Contacts
             </a>
           </li>
@@ -49,7 +91,7 @@
     </header>
   </div>
 
-  <main>
+  <main class="main">
     <div class="hero">
       <div class="wrapper">
         <div class="hero__wrapper">
@@ -263,5 +305,7 @@
     </div>
   </div>
 </footer>
+
 </body>
+<script type="text/javascript" src="script.js"></script>
 </html>

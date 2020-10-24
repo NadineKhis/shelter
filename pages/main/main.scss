@@ -160,6 +160,34 @@ $card-hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   @include button;
 }
 
+@mixin paragraph-mobile-menu() {
+  //font-family: Arial;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 51px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  50% {
+    margin-left: 50%;
+    width: 200%;
+  }
+
+  to {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
 :root {
   font-size: 10px;
 }
@@ -184,6 +212,7 @@ header {
   justify-content: space-between;
   width: 100%;
   padding: 6rem 4rem;
+  transition: 400ms;
 }
 
 .logo {
@@ -214,9 +243,10 @@ header {
   .burger-button {
     visibility: collapse;
   }
+
 }
 
-.list {
+#menu-list {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -228,15 +258,17 @@ header {
     display: flex;
     align-items: center;
     color: $color-light-s;
-
+    text-decoration: none;
 
     .list__link {
+      text-decoration: none;
       font-family: Arial, sans-serif;
       font-size: 1.5rem;
       line-height: 160%;
       cursor: pointer;
 
       &_active {
+        color: $color-light-s;
         border-bottom: solid 3px $color-primary;
         padding-top: 0.5rem;
 
@@ -312,6 +344,7 @@ header {
 .about {
   display: flex;
   justify-content: space-between;
+  background-color: $color-light-xl;
 
   &__wrapper {
     display: flex;
@@ -442,6 +475,7 @@ header {
 }
 
 .help {
+  background-color: $color-light-xl;
   padding-top: 8rem;
   padding-bottom: 10rem;
 
@@ -678,6 +712,19 @@ header {
   }
 }
 
+#burger-menu-bg {
+  //visibility: hidden;
+  //transition: all 0.4s ease 0s;
+  right: -1400px;
+  transition: 600ms;
+  display: flex;
+  visibility: visible;
+  height: 823px;
+  width: 320px;
+  position: fixed;
+  background-color: $color-dark-3xl;
+  z-index: 1;
+}
 
 //-----MEDIA-----
 
@@ -685,7 +732,6 @@ header {
 @media screen and (max-width: 1279px) {
 
   body {
-    width: 76.8rem;
     margin: 0 auto;
   }
   .wrapper {
@@ -737,7 +783,7 @@ header {
   .about {
     &__wrapper {
       flex-direction: column-reverse;
-      padding: 8rem 18rem 9.7rem 17rem;
+      padding: 8rem 16rem 9.7rem 16rem;
     }
 
     &__content {
@@ -777,7 +823,8 @@ header {
   }
 
   .help {
-    margin-bottom: 16.9rem;
+    //margin-bottom: 16.9rem;
+    padding-bottom: 26.8rem;
 
     &__content {
       width: 63rem;
@@ -836,7 +883,7 @@ header {
     &__content {
       flex-direction: column-reverse;
       margin-bottom: 9.7rem;
-      padding: 8rem 14.2rem 0 14.2rem;
+      padding: 8rem 11.2rem 0 13.2rem;
 
       &__image {
         padding-top: 6rem;
@@ -882,15 +929,147 @@ header {
 @media screen and (max-width: 767px) {
 
   body {
-    width: 32rem;
-    //margin: 0 auto;
+
+    #burger-fade {
+      display: none;
+      position: fixed;
+      width: 76.7rem;
+      height: 80rem;
+      background-color: #292929;
+      opacity: .6;
+    }
+
+    #burger-fade.show {
+      display: block;
+    }
+
+    .burger-wrapper {
+      display: flex;
+      justify-items: right;
+    }
+
+    .burger-logo {
+      display: none;
+    }
+
+    .burger-menu {
+      float: right;
+      align-items: flex-end;
+      flex-flow: column-reverse;
+      justify-content: center;
+      position: absolute;
+      display: flex;
+      width: 32rem;
+      padding-right: 4rem;
+      top: 25rem;
+      text-align-last: center;
+    }
+
+    #burger-menu-bg.show {
+      right: 0;
+
+      //COZY HOUSE LOGO
+      .burger-logo {
+        display: flex;
+        flex-direction: column;
+        margin-right: 12rem;
+        width: 30rem;
+        height: 6rem;
+        align-items: center;
+        margin-top: 3rem;
+
+        &__title {
+          color: $color-primary;
+          @include logo-title;
+          white-space: nowrap;
+
+        }
+
+        &__subtitle {
+          margin-top: 10px;
+          color: $color-light-xl;
+          text-align: center;
+          @include logo-subtitle;
+        }
+      }
+
+      // list of burger menu
+      #burger-menu-list {
+        visibility: visible;
+        display: grid;
+        grid-gap: 4rem;
+        @include paragraph-mobile-menu;
+
+        .burger-list__item {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            color: $color-dark-s;
+          }
+
+          .list__link_active {
+            color: $color-light-s;
+            border-bottom: solid 3px $color-primary;
+
+            &:hover {
+              border-bottom: transparent;
+            }
+          }
+          .list__link_disabled {
+            color: $color-dark-s;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .burger-button {
+      //background-color: red;
+      display: block;
+      visibility: visible;
+      right: 5rem;
+      //display: fixed;
+      position: fixed;
+      top: 5rem;
+      transition: 600ms;
+    }
+
+    #burger-menu-list {
+      visibility: collapse;
+    }
+
+    #burger-menu-bg.close {
+      right: -3000;
+      transition: 600ms;
+    }
+    //#burger-menu-bg .show {
+    //  display: block;
+    //  position: absolute;
+    //  background-color: black;
+    //  height: 30rem;
+    //  width: 20rem;
+    //}
+
   }
+
   .wrapper {
     width: 32rem;
   }
+
   header {
     padding-top: 3rem;
     padding-left: 1rem;
+  }
+
+  .header.hide {
+    //visibility: collapse;
+    //transform: translateX(200);
+    transition: 600ms;
+    -webkit-transform: translateY(-45rem);
   }
 
   .logo {
@@ -898,14 +1077,34 @@ header {
   }
 
   .menu {
+    height: 2rem;
+    justify-content: center;
+    position: fixed;
 
     .list {
-      display: none;
+      //display: none;
+      visibility: hidden;
     }
 
     .burger-button {
+      position: relative;
+      height: 22px;
       visibility: visible;
+      margin-top: 2rem;
     }
+
+    .menu-bg {
+      width: 0;
+      height: 0;
+    }
+
+  }
+
+  .show {
+    .burger-button {
+      transform: rotate(90deg);
+    }
+
   }
 
   .hero {
