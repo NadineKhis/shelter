@@ -1028,14 +1028,17 @@ header {
     }
 
     .burger-button {
-      //background-color: red;
       display: block;
       visibility: visible;
       right: 5rem;
-      //display: fixed;
       position: fixed;
       top: 5rem;
       transition: 600ms;
+
+      &:hover {
+        cursor: pointer;
+      }
+
     }
 
     #burger-menu-list {

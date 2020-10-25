@@ -714,6 +714,8 @@ header {
     position: fixed;
     top: 5rem;
     transition: 600ms; }
+    body .burger-button:hover {
+      cursor: pointer; }
   body #burger-menu-list {
     visibility: collapse; }
   body #burger-menu-bg.close {
