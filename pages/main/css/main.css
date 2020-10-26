@@ -884,6 +884,10 @@ header {
   .popup-card .content .block-text .control {
     transform: translate(40px, -62px); }
 
+  .control.close img:hover {
+    cursor: pointer;
+    background-color: #F1CDB3; }
+
   header {
     padding-top: 3rem;
     padding-left: 1rem; }

@@ -1259,6 +1259,11 @@ header {
     transform: translate(40px, -62px);
   }
 
+  .control.close img:hover {
+    cursor: pointer;
+    background-color: $color-primary;
+  }
+
 
   header {
     padding-top: 3rem;

@@ -36,11 +36,11 @@ header {
         color: $color-dark-3xl
       }
 
-      .active {
+      &_active {
         color: $color-dark-3xl;
       }
 
-      .disabled {
+      &_disabled {
         color: $color-dark-l;
       }
     }
@@ -85,31 +85,30 @@ header {
   background: $color-light-l;
 
   &__wrapper {
-    display: grid;
-    place-items: center;
+    //display: grid;
+    //place-items: center;
   }
 
   .pagination {
     display: flex;
     flex-direction: row;
 
+    .disabled {
+      box-shadow: inset 0 0 0 0.3rem $color-dark-s;
+      color: $color-dark-s;
+
+      &:hover {
+        cursor: default;
+        box-shadow: inset 0 0 0 0.3rem $color-dark-s;
+        background-color: $color-light-s;
+      }
+    }
     &__button {
       @include slider-button;
       @include h4;
       margin: 0 1rem;
 
-      &__disabled {
-        box-shadow: inset 0 0 0 0.3rem $color-dark-s;
-        color: $color-dark-s;
-
-        &:hover {
-          cursor: default;
-          box-shadow: inset 0 0 0 0.3rem $color-dark-s;
-          background-color: $color-light-s;
-        }
-      }
-
-      &__active {
+      .active {
         background-color: $color-primary;
         box-shadow: inset 0 0 0 0.3rem $color-primary;
 
@@ -129,6 +128,10 @@ header {
   animation: left 0.5s ease-in-out reverse;
 }
 
+.footer {
+  background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+
 @keyframes left {
   from {
     left: 0;
@@ -137,6 +140,8 @@ header {
     left: -100%;
   }
 }
+
+
 //-----MEDIA-----
 
 //---TABLET---
@@ -193,75 +198,96 @@ header {
     padding-left: 1rem;
   }
 
-  .pets {
-    padding-bottom: 4.4rem;
-
-    &__wrapper {
-      display: flex;
-    }
-
-    &__content {
-      &__cards {
-        justify-content: center;
-        padding: 0;
-        margin-top: 1.3rem;
-
-        .card {
-
-          &__button {
-            margin-top: 0.05rem;
-            padding: 1.64rem 4.5rem;
-          }
-
-          &:nth-child(1) {
-            margin-top: 3rem;
-          }
-
-          &:nth-child(2) {
-            display: flex;
-            margin: 1.3rem;
-
-            .card__title {
-              margin-top: 2.7rem;
-            }
-          }
-
-          &:nth-child(3) {
-            //margin: 2rem;
-          }
-
-          &:nth-child(n+4) {
-            display: none;
-          }
-
-          &:nth-child(n+3) {
-            margin-top: 1.8rem;
-          }
-
-          //&:nth-child(n) {
-          //  margin: 1.7rem;
-          //}
-        }
-      }
-    }
-
-    .pagination {
-
-      &__button {
-        &:nth-child(1) {
-          margin-right: 0;
-        }
-
-        &__active {
-          margin: 0;
-        }
-
-        &:nth-child(5) {
-          margin-left: 0;
-        }
-      }
-    }
+  body > div.pets > div > div > div.pets__content > div > div > div:nth-child(2) {
+    display: flex;
   }
-}
+  .block-slides .slides .card:nth-child(4),
+  .block-slides .slides .card:nth-child(5),
+  .block-slides .slides .card:nth-child(6) {
+    display: none;
+  }
+
+
+  .pets__wrapper {
+    padding: 0;
+  }
+  .block-slides {
+    max-width: 576px;
+    padding: 42px 74px 12px 74px;
+  }
+
+  .slides {
+    flex-direction: column;
+  }
+
+  //.pets {
+  //  padding-bottom: 4.4rem;
+  //
+  //  &__wrapper {
+  //    display: flex;
+  //  }
+  //
+  //  &__content {
+  //    &__cards {
+  //      justify-content: center;
+  //      padding: 0;
+  //      margin-top: 1.3rem;
+  //
+  //      .card {
+  //
+  //        &__button {
+  //          margin-top: 0.05rem;
+  //          padding: 1.64rem 4.5rem;
+  //        }
+  //
+  //        &:nth-child(1) {
+  //          margin-top: 3rem;
+  //        }
+  //
+  //        &:nth-child(2) {
+  //          display: flex;
+  //          margin: 1.3rem;
+  //
+  //          .card__title {
+  //            margin-top: 2.7rem;
+  //          }
+  //        }
+  //
+  //        &:nth-child(3) {
+  //          //margin: 2rem;
+  //        }
+  //
+  //        &:nth-child(n+4) {
+  //          display: none;
+  //        }
+  //
+  //        &:nth-child(n+3) {
+  //          margin-top: 1.8rem;
+  //        }
+  //
+  //        //&:nth-child(n) {
+  //        //  margin: 1.7rem;
+  //        //}
+  //      }
+  //    }
+  //  }
+
+    //.pagination {
+    //
+    //  &__button {
+    //    &:nth-child(1) {
+    //      margin-right: 0;
+    //    }
+    //
+    //    &__active {
+    //      margin: 0;
+    //    }
+    //
+    //    &:nth-child(5) {
+    //      margin-left: 0;
+    //    }
+    //  }
+    //}
+  }
 
 

@@ -884,6 +884,10 @@ header {
   .popup-card .content .block-text .control {
     transform: translate(40px, -62px); }
 
+  .control.close img:hover {
+    cursor: pointer;
+    background-color: #F1CDB3; }
+
   header {
     padding-top: 3rem;
     padding-left: 1rem; }
@@ -1102,9 +1106,9 @@ header {
   text-decoration: none; }
   #menu-list .list__item .list__link:hover {
     color: #292929; }
-  #menu-list .list__item .list__link .active {
+  #menu-list .list__item .list__link_active {
     color: #292929; }
-  #menu-list .list__item .list__link .disabled {
+  #menu-list .list__item .list__link_disabled {
     color: #545454; }
 
 .pets__content__cards {
@@ -1139,12 +1143,16 @@ header {
 .pets {
   padding-bottom: 9.8rem;
   background: #F6F6F6; }
-  .pets__wrapper {
-    display: grid;
-    place-items: center; }
   .pets .pagination {
     display: flex;
     flex-direction: row; }
+    .pets .pagination .disabled {
+      box-shadow: inset 0 0 0 0.3rem #CDCDCD;
+      color: #CDCDCD; }
+      .pets .pagination .disabled:hover {
+        cursor: default;
+        box-shadow: inset 0 0 0 0.3rem #CDCDCD;
+        background-color: #FAFAFA; }
     .pets .pagination__button {
       display: flex;
       justify-content: center;
@@ -1170,17 +1178,10 @@ header {
       .pets .pagination__button:hover {
         box-shadow: none;
         background-color: #FDDCC4; }
-      .pets .pagination__button__disabled {
-        box-shadow: inset 0 0 0 0.3rem #CDCDCD;
-        color: #CDCDCD; }
-        .pets .pagination__button__disabled:hover {
-          cursor: default;
-          box-shadow: inset 0 0 0 0.3rem #CDCDCD;
-          background-color: #FAFAFA; }
-      .pets .pagination__button__active {
+      .pets .pagination__button .active {
         background-color: #F1CDB3;
         box-shadow: inset 0 0 0 0.3rem #F1CDB3; }
-        .pets .pagination__button__active:hover {
+        .pets .pagination__button .active:hover {
           background-color: #FDDCC4; }
 
 .to-left {
@@ -1188,6 +1189,9 @@ header {
 
 .to-right {
   animation: left 0.5s ease-in-out reverse; }
+
+.footer {
+  background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20; }
 
 @keyframes left {
   from {
@@ -1222,33 +1226,22 @@ header {
     padding-top: 3rem;
     padding-left: 1rem; }
 
-  .pets {
-    padding-bottom: 4.4rem; }
-    .pets__wrapper {
-      display: flex; }
-    .pets__content__cards {
-      justify-content: center;
-      padding: 0;
-      margin-top: 1.3rem; }
-      .pets__content__cards .card__button {
-        margin-top: 0.05rem;
-        padding: 1.64rem 4.5rem; }
-      .pets__content__cards .card:nth-child(1) {
-        margin-top: 3rem; }
-      .pets__content__cards .card:nth-child(2) {
-        display: flex;
-        margin: 1.3rem; }
-        .pets__content__cards .card:nth-child(2) .card__title {
-          margin-top: 2.7rem; }
-      .pets__content__cards .card:nth-child(n+4) {
-        display: none; }
-      .pets__content__cards .card:nth-child(n+3) {
-        margin-top: 1.8rem; }
-    .pets .pagination__button:nth-child(1) {
-      margin-right: 0; }
-    .pets .pagination__button__active {
-      margin: 0; }
-    .pets .pagination__button:nth-child(5) {
-      margin-left: 0; } }
+  body > div.pets > div > div > div.pets__content > div > div > div:nth-child(2) {
+    display: flex; }
+
+  .block-slides .slides .card:nth-child(4),
+  .block-slides .slides .card:nth-child(5),
+  .block-slides .slides .card:nth-child(6) {
+    display: none; }
+
+  .pets__wrapper {
+    padding: 0; }
+
+  .block-slides {
+    max-width: 576px;
+    padding: 42px 74px 12px 74px; }
+
+  .slides {
+    flex-direction: column; } }
 
 /*# sourceMappingURL=pets.css.map */
