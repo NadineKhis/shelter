@@ -1,4 +1,4 @@
-@import "../main/main";
+@import "../main/css/main";
 
 
 body > div.wrapper > header {
@@ -36,11 +36,11 @@ header {
         color: $color-dark-3xl
       }
 
-      &_active {
+      .active {
         color: $color-dark-3xl;
       }
 
-      &_disabled {
+      .disabled {
         color: $color-dark-l;
       }
     }
@@ -48,21 +48,36 @@ header {
 }
 
 .pets__content__cards {
-  flex-wrap: wrap;
-  padding: 6.2rem 4rem 2.7rem 4rem;
+  //flex-wrap: wrap;
+  //padding: 6.2rem 4rem 2.7rem 4rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //padding: 59px 30px 30px 30px;
 
-  .card {
-    margin: 0 2rem 3.5rem;
+  .slides {
+    display: flex;
+    position: relative;
+    left: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 100%;
 
-    &__left-side {
-      margin-left: 0;
-    }
+    .card {
+      padding-bottom: 30px;
+      margin: 0 10px 30px 10px;
+      background: #fafafa;
+      border-radius: 9px;
+      transition: 0.3s ease-in-out;
 
-    &__right-side {
-      margin-right: 0;
+      h4 {
+        @include h4;
+      }
     }
   }
-
 }
 
 .pets {
@@ -106,6 +121,22 @@ header {
   }
 }
 
+.to-left {
+  animation: left 0.5s ease-in-out;
+}
+
+.to-right {
+  animation: left 0.5s ease-in-out reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
 //-----MEDIA-----
 
 //---TABLET---
