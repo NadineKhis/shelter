@@ -52,15 +52,32 @@
   transform: translate(62px, -52px);
   cursor: pointer; }
 
+.control.close img {
+  border-radius: 50%; }
+
+.control.close img:hover {
+  cursor: pointer;
+  background-color: #F1CDB3; }
+
 .popup-card .content .block-text h3 {
+  font-family: Georgia, Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.21rem;
+  color: #545454;
   color: #000; }
 
 .popup-card .content .block-text h4 {
-  padding-top: 10px;
-  font-family: Georgia;
-  font-size: 20px;
+  font-family: Georgia, Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
   line-height: 115%;
-  letter-spacing: 0.06em; }
+  letter-spacing: 0.12rem;
+  color: #545454;
+  padding-top: 10px; }
 
 .popup-card .content .block-text p {
   padding-top: 40px;
@@ -883,10 +900,6 @@ header {
 
   .popup-card .content .block-text .control {
     transform: translate(40px, -62px); }
-
-  .control.close img:hover {
-    cursor: pointer;
-    background-color: #F1CDB3; }
 
   header {
     padding-top: 3rem;

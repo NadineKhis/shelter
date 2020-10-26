@@ -232,17 +232,23 @@ $card-hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   transform: translate(62px, -52px);
   cursor: pointer;
 }
+.control.close img {
+  border-radius: 50%;
+}
+.control.close img:hover {
+  cursor: pointer;
+  background-color: $color-primary;
 
+}
 .popup-card .content .block-text h3 {
+  @include h3;
   color: #000;
 }
 
 .popup-card .content .block-text h4 {
+  @include h4;
   padding-top: 10px;
-  font-family: Georgia;
-  font-size: 20px;
-  line-height: 115%;
-  letter-spacing: 0.06em;
+
 }
 
 .popup-card .content .block-text p {
@@ -1258,12 +1264,6 @@ header {
   .popup-card .content .block-text .control {
     transform: translate(40px, -62px);
   }
-
-  .control.close img:hover {
-    cursor: pointer;
-    background-color: $color-primary;
-  }
-
 
   header {
     padding-top: 3rem;
