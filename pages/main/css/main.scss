@@ -10,11 +10,11 @@ $color-dark-xl: #4C4C4C;
 $color-dark-2xl: #444444;
 $color-dark-3xl: #292929;
 
-$start-screen-gradient-background: url(../../assets/images/noise_transparent@2x.png),
+$start-screen-gradient-background: url(../../../assets/images/noise_transparent@2x.png),
 radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%),
 #211F20;
 
-$footer-gradient-background: url(../../assets/images/noise_transparent@2x.png),
+$footer-gradient-background: url(../../../assets/images/noise_transparent@2x.png),
 radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
 #211F20;
 
@@ -171,22 +171,6 @@ $card-hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   text-decoration: none;
 }
 
-@keyframes slideIn {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  50% {
-    margin-left: 50%;
-    width: 200%;
-  }
-
-  to {
-    margin-left: 0;
-    width: 100%;
-  }
-}
 
 :root {
   font-size: 10px;
@@ -393,6 +377,8 @@ header {
   padding-bottom: 10rem;
   background: $color-light-l;
 
+
+
   &__wrapper {
     width: 100%;
     display: flex;
@@ -412,16 +398,28 @@ header {
     @include h3;
   }
 
+  //.swiper-container {
+  //  width: 120rem;
+  //
+  //  height: 435px;
+  //}
+
   &__content {
     display: flex;
     align-items: center;
+    overflow: hidden;
+    width: 120rem;
+
+    justify-content: space-between;
+
 
     .slider-button {
       @include slider-button;
       outline: transparent;
+      //z-index: 1;
     }
 
-    .slider-button_right {
+    .slider-button.right {
       @include slider-button;
       transform: scaleX(-1);
       outline: transparent;
@@ -429,13 +427,40 @@ header {
 
     &__cards {
       display: flex;
-      padding: 6rem 0.8rem;
+      min-width: 0;
+      position: relative;
+      padding: 59px 8px;
+      overflow: hidden;
+      justify-content: space-between;
+      align-items: center;
 
-      .card {
+      .slide {
         display: flex;
+        flex-direction: row;
+        position: relative;
+        left: 0;
+        justify-content: space-around;
+        width: 100%;
+        min-width: 100%;
+
+        &.to-left {
+          animation: left 0.5s ease-in-out;
+        }
+        &.to-right {
+          animation: left 0.5s ease-in-out reverse;
+        }
+      }
+      .card {
+        display: block;
         flex-direction: column;
         border-radius: 0.9rem;
         margin: 0 4.5rem;
+        min-width: 0;
+        max-width: 27rem;
+        flex-shrink: 0;
+        text-align: center;
+        background-color: #fafafa;
+        transition: 0.3s ease-in-out;
 
         &:hover {
           box-shadow: $card-hover;
@@ -451,18 +476,29 @@ header {
           align-items: center;
           padding-bottom: 3rem;
           background: #fafafa;
+          min-width: 0;
         }
 
-        &__title {
+        h4 {
           margin: 3rem 0;
           @include h4;
         }
 
-        &__button {
+        button {
           @include button-secondary;
           letter-spacing: 0.09rem;
+          margin-bottom: 3rem;
         }
       }
+    }
+  }
+
+  @keyframes left {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
     }
   }
 
@@ -804,6 +840,7 @@ header {
     padding-top: 8.2rem;
 
     &__content {
+      width: 70.8rem;
       &__cards {
         padding: 6rem 0;
 
@@ -1049,14 +1086,6 @@ header {
       right: -3000;
       transition: 600ms;
     }
-    //#burger-menu-bg .show {
-    //  display: block;
-    //  position: absolute;
-    //  background-color: black;
-    //  height: 30rem;
-    //  width: 20rem;
-    //}
-
   }
 
   .wrapper {
@@ -1069,8 +1098,6 @@ header {
   }
 
   .header.hide {
-    //visibility: collapse;
-    //transform: translateX(200);
     transition: 600ms;
     -webkit-transform: translateY(-45rem);
   }
