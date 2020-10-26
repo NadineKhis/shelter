@@ -1438,4 +1438,10 @@ header {
   }
 }
 
+@media screen and (min-width: 320px){
+  body {
+    overflow-x: hidden;
+  }
+}
+
 

@@ -948,5 +948,8 @@ header {
     margin-left: 3rem; }
     .footer__content-image img {
       width: 26rem; } }
+@media screen and (min-width: 320px) {
+  body {
+    overflow-x: hidden; } }
 
 /*# sourceMappingURL=main.css.map */
