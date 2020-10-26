@@ -838,11 +838,16 @@ header {
         letter-spacing: 0.15rem; }
     .pets__content {
       flex-flow: wrap;
-      justify-content: center; }
+      justify-content: center;
+      flex-direction: column; }
       .pets__content .slider-button {
-        margin-right: 8rem; }
+        order: 1; }
+        .pets__content .slider-button:first-child {
+          margin-right: 132px; }
+        .pets__content .slider-button:last-child {
+          margin-left: 132px;
+          margin-top: -52px; }
       .pets__content__cards {
-        order: -1;
         padding: 4.4rem 0 2rem; }
         .pets__content__cards .card:nth-child(1) {
           margin: 0; }
