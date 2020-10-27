@@ -291,7 +291,6 @@ $card-hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   font-weight: normal;
 }
 
-
 .wrapper {
   display: flex;
   margin: 0 auto;
@@ -305,6 +304,10 @@ header {
   width: 100%;
   padding: 6rem 4rem;
   transition: 400ms;
+}
+
+.header-inner a {
+  text-decoration: none;
 }
 
 .logo {

@@ -13,6 +13,10 @@ body > div.wrapper > header {
 header {
   padding: 3rem 4rem;
 
+  a {
+    text-decoration: none;
+  }
+
   .logo {
     &__title {
       color: $color-dark-l;

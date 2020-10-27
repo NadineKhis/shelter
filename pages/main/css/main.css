@@ -123,6 +123,9 @@ header {
   padding: 6rem 4rem;
   transition: 400ms; }
 
+.header-inner a {
+  text-decoration: none; }
+
 .logo {
   display: flex;
   flex-direction: column;

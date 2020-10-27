@@ -123,6 +123,9 @@ header {
   padding: 6rem 4rem;
   transition: 400ms; }
 
+.header-inner a {
+  text-decoration: none; }
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -1119,6 +1122,8 @@ body > div.wrapper > header {
 
 header {
   padding: 3rem 4rem; }
+  header a {
+    text-decoration: none; }
   header .logo__title {
     color: #545454; }
   header .logo__subtitle {
