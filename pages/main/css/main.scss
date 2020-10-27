@@ -327,7 +327,7 @@ header {
 
 .menu {
   display: flex;
-  width: 47.3rem;
+  width: 44.3rem;
 
   .burger-button {
     visibility: collapse;
@@ -439,7 +439,7 @@ header {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 8rem 17.5rem 10rem 17.5rem;
+    padding: 8rem 21.5rem 10rem 21.5rem;
   }
 
   & .wrapper {
@@ -502,12 +502,6 @@ header {
     @include h3;
   }
 
-  //.swiper-container {
-  //  width: 120rem;
-  //
-  //  height: 435px;
-  //}
-
   &__content {
     display: flex;
     align-items: center;
@@ -555,7 +549,9 @@ header {
           animation: left 0.5s ease-in-out reverse;
         }
       }
-
+      .card.hide {
+        opacity: .1;
+      }
       .card {
         display: block;
         flex-direction: column;
@@ -855,8 +851,7 @@ header {
 }
 
 #burger-menu-bg {
-  //visibility: hidden;
-  //transition: all 0.4s ease 0s;
+
   right: -1400px;
   transition: 600ms;
   display: flex;
@@ -1195,11 +1190,18 @@ header {
             }
           }
 
-          .list__link_disabled {
+          .list__link_not-active {
             color: $color-dark-s;
 
             &:hover {
               color: #fff;
+            }
+          }
+          .list__link_disabled {
+            color: $color-dark-s;
+
+            &:hover {
+              cursor: default;
             }
           }
         }

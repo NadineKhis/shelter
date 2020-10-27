@@ -9,23 +9,24 @@
   <link href="pets.css" type="text/css" rel="stylesheet">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
-<div class="popup-card" style="display: none; opacity: 0;"></div>
+<body spellcheck="false">
 <div class="burger-wrapper">
   <div id="burger-menu-bg">
-    <div class="burger-logo">
-      <div class="burger-logo__title">
-        Cozy House
+    <a href="../main/main.html" class="logo_link">
+      <div class="burger-logo">
+        <div class="burger-logo__title">
+          Cozy House
+        </div>
+        <div class="burger-logo__subtitle">
+          Shelter for pets in Boston
+        </div>
       </div>
-      <div class="burger-logo__subtitle">
-        Shelter for pets in Boston
-      </div>
-    </div>
+    </a>
     <nav id="burger-menu" class="burger-menu">
       <img id="openBurger" class="burger-button" src="../../assets/images/main/start_screen/Burger.svg" alt="">
       <ul id="burger-menu-list" class="burger-list">
         <li class="burger-list__item">
-          <a class="list__link list__link_disabled" href="../main/main.html">
+          <a class="list__link list__link_not-active" href="../main/main.html">
             About the shelter
           </a>
         </li>
@@ -49,6 +50,8 @@
   </div>
 </div>
 <div id="burger-fade"></div>
+<div class="popup-card" style="display: none; opacity: 0;"></div>
+
 <div class="wrapper">
   <header id="main-header" class="header">
     <div class="logo">

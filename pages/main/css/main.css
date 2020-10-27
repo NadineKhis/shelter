@@ -147,7 +147,7 @@ header {
 
 .menu {
   display: flex;
-  width: 47.3rem; }
+  width: 44.3rem; }
   .menu .burger-button {
     visibility: collapse; }
 
@@ -240,7 +240,7 @@ header {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 8rem 17.5rem 10rem 17.5rem; }
+    padding: 8rem 21.5rem 10rem 21.5rem; }
   .about .wrapper {
     justify-content: center; }
   .about__content {
@@ -359,6 +359,8 @@ header {
           animation: left 0.5s ease-in-out; }
         .pets__content__cards .slide.to-right {
           animation: left 0.5s ease-in-out reverse; }
+      .pets__content__cards .card.hide {
+        opacity: .1; }
       .pets__content__cards .card {
         display: block;
         flex-direction: column;
@@ -854,10 +856,14 @@ header {
           border-bottom: solid 3px #F1CDB3; }
           body #burger-menu-bg.show #burger-menu-list .burger-list__item .list__link_active:hover {
             border-bottom: transparent; }
+        body #burger-menu-bg.show #burger-menu-list .burger-list__item .list__link_not-active {
+          color: #CDCDCD; }
+          body #burger-menu-bg.show #burger-menu-list .burger-list__item .list__link_not-active:hover {
+            color: #fff; }
         body #burger-menu-bg.show #burger-menu-list .burger-list__item .list__link_disabled {
           color: #CDCDCD; }
           body #burger-menu-bg.show #burger-menu-list .burger-list__item .list__link_disabled:hover {
-            color: #fff; }
+            cursor: default; }
   body .burger-button {
     display: block;
     visibility: visible;

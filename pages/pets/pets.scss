@@ -6,6 +6,10 @@ body > div.wrapper > header {
 
 }
 
+.burger-logo {
+  padding-right: 7rem;
+}
+
 header {
   padding: 3rem 4rem;
 
@@ -23,6 +27,10 @@ header {
     color: $color-dark-l;
 
   }
+}
+
+.logo_link {
+  text-decoration: none;
 }
 
 #menu-list {
@@ -103,6 +111,7 @@ header {
         background-color: $color-light-s;
       }
     }
+
     &__button {
       @include slider-button;
       @include h4;
@@ -219,75 +228,6 @@ header {
   .slides {
     flex-direction: column;
   }
-
-  //.pets {
-  //  padding-bottom: 4.4rem;
-  //
-  //  &__wrapper {
-  //    display: flex;
-  //  }
-  //
-  //  &__content {
-  //    &__cards {
-  //      justify-content: center;
-  //      padding: 0;
-  //      margin-top: 1.3rem;
-  //
-  //      .card {
-  //
-  //        &__button {
-  //          margin-top: 0.05rem;
-  //          padding: 1.64rem 4.5rem;
-  //        }
-  //
-  //        &:nth-child(1) {
-  //          margin-top: 3rem;
-  //        }
-  //
-  //        &:nth-child(2) {
-  //          display: flex;
-  //          margin: 1.3rem;
-  //
-  //          .card__title {
-  //            margin-top: 2.7rem;
-  //          }
-  //        }
-  //
-  //        &:nth-child(3) {
-  //          //margin: 2rem;
-  //        }
-  //
-  //        &:nth-child(n+4) {
-  //          display: none;
-  //        }
-  //
-  //        &:nth-child(n+3) {
-  //          margin-top: 1.8rem;
-  //        }
-  //
-  //        //&:nth-child(n) {
-  //        //  margin: 1.7rem;
-  //        //}
-  //      }
-  //    }
-  //  }
-
-    //.pagination {
-    //
-    //  &__button {
-    //    &:nth-child(1) {
-    //      margin-right: 0;
-    //    }
-    //
-    //    &__active {
-    //      margin: 0;
-    //    }
-    //
-    //    &:nth-child(5) {
-    //      margin-left: 0;
-    //    }
-    //  }
-    //}
-  }
+}
 
 
