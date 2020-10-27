@@ -232,14 +232,17 @@ $card-hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   transform: translate(62px, -52px);
   cursor: pointer;
 }
+
 .control.close img {
   border-radius: 50%;
 }
+
 .control.close img:hover {
   cursor: pointer;
   background-color: $color-primary;
 
 }
+
 .popup-card .content .block-text h3 {
   @include h3;
   color: #000;
@@ -502,6 +505,7 @@ header {
     @include h3;
   }
 
+
   &__content {
     display: flex;
     align-items: center;
@@ -540,9 +544,6 @@ header {
         justify-content: space-around;
         width: 100%;
         min-width: 100%;
-        .card:hover {
-          cursor: pointer;
-        }
 
         &.to-left {
           animation: left 0.5s ease-in-out;
@@ -552,9 +553,11 @@ header {
           animation: left 0.5s ease-in-out reverse;
         }
       }
+
       .card.hide {
         opacity: .1;
       }
+
       .card {
         display: block;
         flex-direction: column;
@@ -566,10 +569,10 @@ header {
         text-align: center;
         background-color: #fafafa;
         transition: 0.3s ease-in-out;
+        cursor: pointer;
 
         &:hover {
           box-shadow: $card-hover;
-          cursor: pointer;
         }
 
         &__image {
@@ -1205,6 +1208,7 @@ header {
               color: #fff;
             }
           }
+
           .list__link_disabled {
             color: $color-dark-s;
 
