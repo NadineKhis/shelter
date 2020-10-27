@@ -15,6 +15,7 @@ function open() {
     document.getElementById("burger-fade").classList.toggle("show");
     document.getElementById("main-header").classList.toggle("hide")
     document.querySelectorAll(".card").forEach(item => item.classList.toggle('hide'))
+    // document.querySelectorAll(".card").forEach(item => item.classList.toggle('card'))
     console.log('open burger menu')
 }
 

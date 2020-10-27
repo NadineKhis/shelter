@@ -355,6 +355,8 @@ header {
         justify-content: space-around;
         width: 100%;
         min-width: 100%; }
+        .pets__content__cards .slide .card:hover {
+          cursor: pointer; }
         .pets__content__cards .slide.to-left {
           animation: left 0.5s ease-in-out; }
         .pets__content__cards .slide.to-right {
@@ -373,7 +375,8 @@ header {
         background-color: #fafafa;
         transition: 0.3s ease-in-out; }
         .pets__content__cards .card:hover {
-          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04); }
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          cursor: pointer; }
         .pets__content__cards .card__image {
           width: 100%; }
         .pets__content__cards .card__content {
@@ -790,6 +793,8 @@ header {
     height: 80rem;
     background-color: #292929;
     opacity: .6; }
+  body #burger-fade:hover {
+    cursor: pointer; }
   body #burger-fade.show {
     display: block; }
   body .burger-wrapper {

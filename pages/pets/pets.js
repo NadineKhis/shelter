@@ -60,7 +60,12 @@ function pets(dataPets) {
           <button class="btn-white">Learn more</button>
           `;
                 card.addEventListener("click", () => {
-                    addPopup(el);
+                    if (document.querySelector('.hide') !== null) {
+                        open()
+                    }
+                    else {
+                        addPopup(el);
+                    }
                 });
                 slides.append(card);
             }

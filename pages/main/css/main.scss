@@ -540,6 +540,9 @@ header {
         justify-content: space-around;
         width: 100%;
         min-width: 100%;
+        .card:hover {
+          cursor: pointer;
+        }
 
         &.to-left {
           animation: left 0.5s ease-in-out;
@@ -566,6 +569,7 @@ header {
 
         &:hover {
           box-shadow: $card-hover;
+          cursor: pointer;
         }
 
         &__image {
@@ -1112,6 +1116,10 @@ header {
       opacity: .6;
     }
 
+    #burger-fade:hover {
+      cursor: pointer;
+    }
+
     #burger-fade.show {
       display: block;
     }
@@ -1440,6 +1448,7 @@ header {
         .card:nth-child(2) {
           display: none;
         }
+
       }
     }
 

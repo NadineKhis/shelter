@@ -57,7 +57,12 @@ function main(dataPets) {
         <button class="card__button">Learn more</button>
         `;
             card.addEventListener("click", () => {
-                addPopup(el);
+                if (document.querySelector('.hide') !== null) {
+                    open()
+                }
+                else {
+                    addPopup(el);
+                }
             });
 
             slide.append(card);
