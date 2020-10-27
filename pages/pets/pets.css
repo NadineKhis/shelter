@@ -708,7 +708,7 @@ header {
 
   .about__wrapper {
     flex-direction: column-reverse;
-    padding: 8rem 16rem 9.7rem 16rem; }
+    align-items: center; }
   .about__content {
     margin: 0; }
   .about__description p {
@@ -764,8 +764,7 @@ header {
 
   .donation__content {
     flex-direction: column-reverse;
-    margin-bottom: 9.7rem;
-    padding: 8rem 11.2rem 0 13.2rem; }
+    margin-bottom: 9.7rem; }
     .donation__content__image {
       padding-top: 6rem; }
     .donation__content__info {
@@ -972,7 +971,8 @@ header {
 
   .about__wrapper {
     padding: 0;
-    margin-bottom: 4.1rem; }
+    margin-bottom: 4.1rem;
+    justify-content: center; }
   .about__content {
     align-items: center; }
   .about__title {

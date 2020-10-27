@@ -964,7 +964,7 @@ header {
   .about {
     &__wrapper {
       flex-direction: column-reverse;
-      padding: 8rem 16rem 9.7rem 16rem;
+      align-items: center;
     }
 
     &__content {
@@ -1066,7 +1066,7 @@ header {
     &__content {
       flex-direction: column-reverse;
       margin-bottom: 9.7rem;
-      padding: 8rem 11.2rem 0 13.2rem;
+
 
       &__image {
         padding-top: 6rem;
@@ -1376,6 +1376,7 @@ header {
     &__wrapper {
       padding: 0;
       margin-bottom: 4.1rem;
+      justify-content: center;
     }
 
     &__content {
@@ -1516,8 +1517,6 @@ header {
         max-height: 5rem;
       }
     }
-
-
   }
 
   .donation {
