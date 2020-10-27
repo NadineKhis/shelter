@@ -540,7 +540,8 @@ header {
         border-radius: 0.9rem;
         background-color: #F1CDB3;
         margin-top: 1.8rem;
-        padding-top: 1rem; }
+        padding-top: 1rem;
+        cursor: pointer; }
         .donation__content__info .donation__credit__number {
           font-family: Georgia, Serif;
           font-style: normal;
@@ -548,8 +549,11 @@ header {
           font-size: 2rem;
           line-height: 115%;
           letter-spacing: 0.12rem;
-          color: #545454;
-          cursor: pointer; }
+          color: #545454; }
+          .donation__content__info .donation__credit__number:hover {
+            color: #292929; }
+        .donation__content__info .donation__credit:hover {
+          transform: scale(1.05); }
       .donation__content__info p {
         font-family: Arial;
         font-style: italic;

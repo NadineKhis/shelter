@@ -742,10 +742,16 @@ header {
         background-color: $color-primary;
         margin-top: 1.8rem;
         padding-top: 1rem;
+        cursor: pointer;
 
         &__number {
           @include h4;
-          cursor: pointer;
+          &:hover {
+            color: $color-dark-3xl;
+          }
+        }
+        &:hover {
+          transform: scale(1.05);
         }
       }
 
