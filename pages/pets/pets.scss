@@ -29,7 +29,6 @@ header {
 
   .list__link_disabled {
     color: $color-dark-l;
-
   }
 }
 
@@ -54,6 +53,9 @@ header {
 
       &_disabled {
         color: $color-dark-l;
+        &:hover {
+          color: $color-dark-l
+        }
       }
     }
   }

@@ -178,10 +178,14 @@ header {
         padding-top: 0.5rem; }
         #menu-list .list__item .list__link_active:hover {
           border-bottom: transparent; }
+      #menu-list .list__item .list__link_not-active {
+        color: #CDCDCD; }
+        #menu-list .list__item .list__link_not-active:hover {
+          color: #fff; }
       #menu-list .list__item .list__link_disabled {
         color: #CDCDCD; }
         #menu-list .list__item .list__link_disabled:hover {
-          color: #fff; }
+          cursor: default; }
 
 .bg {
   background: url(../../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20; }
@@ -1143,6 +1147,8 @@ header {
     color: #292929; }
   #menu-list .list__item .list__link_disabled {
     color: #545454; }
+    #menu-list .list__item .list__link_disabled:hover {
+      color: #545454; }
 
 .pets__content__cards {
   position: relative;

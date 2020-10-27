@@ -372,11 +372,18 @@ header {
         }
       }
 
-      &_disabled {
+      &_not-active {
         color: $color-dark-s;
 
         &:hover {
           color: #fff;
+        }
+      }
+
+      &_disabled {
+        color: $color-dark-s;
+        &:hover {
+          cursor: default;
         }
       }
     }
