@@ -1244,7 +1244,7 @@ header {
       .pets__content__cards .card:nth-child(n) {
         margin: 2rem; }
       .pets__content__cards .card:nth-child(3) {
-        display: flex; }
+        display: block; }
       .pets__content__cards .card:nth-child(n+8) {
         display: none; }
       .pets__content__cards .card:nth-child(n+3) {
